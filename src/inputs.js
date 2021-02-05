@@ -73,10 +73,10 @@ export const ThemesInput = ({ label, source }) => (
   </UriArrayInput>
 );
 
-export const UsersInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="User" source={source}>
+export const PersonsInput = ({ label, source }) => (
+  <UriArrayInput label={label} reference="Person" source={source}>
     <AutocompleteArrayInput
-      optionText={record => record && `${record['pair:firstName']} ${record['pair:lastName']}`}
+      optionText={record => record && record.name}
       shouldRenderSuggestions={value => value.length > 1}
       fullWidth
     />

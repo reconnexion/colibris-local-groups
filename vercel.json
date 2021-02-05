@@ -2,7 +2,8 @@
   "version": 2,
   "build": {
     "env": {
-      "REACT_APP_MIDDLEWARE_URL": "https://dev.colibris.social/"
+      "REACT_APP_MIDDLEWARE_URL": "https://dev.colibris.social/",
+      "REACT_APP_LOCAL_GROUP_URL": "https://dev.colibris.social/groups/60-pays-creillois"
     }
   },
   "public": true

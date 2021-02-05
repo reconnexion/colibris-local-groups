@@ -2,7 +2,7 @@ import React from 'react';
 import { List, SimpleList } from '@semapps/archipelago-layout';
 
 const OrganizationList = props => (
-  <List {...props}>
+  <List title="Annuaire des acteurs" {...props}>
     <SimpleList
       primaryText={record => record['pair:label']}
       secondaryText={record => record['pair:comment']}
