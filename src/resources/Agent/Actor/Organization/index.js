@@ -18,6 +18,7 @@ export default {
   dataModel: {
     types: ['pair:Organization'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'organizations',
+    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
     slugField: 'pair:label'
   },
   translations: {
@@ -27,6 +28,8 @@ export default {
         'pair:label': 'Nom',
         'pair:comment': 'Courte description',
         'pair:description': 'Description',
+        'pair:phone': 'Téléphone',
+        'pair:aboutPage': 'Page Près de chez nous',
         'pair:homePage': 'Site web',
         image: 'Logo',
         'pair:affiliates': 'Membres',

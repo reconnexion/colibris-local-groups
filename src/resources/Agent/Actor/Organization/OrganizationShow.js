@@ -9,8 +9,9 @@ const OrganizationShow = props => (
     <ColumnShowLayout>
       <Column xs={12} sm={9}>
         <Hero image="image">
-          <TextField source="pair:comment" />
-          <UrlField source="pair:homePage" />
+          <TextField source="pair:phone" />
+          <UrlField source="pair:aboutPage" />
+          <UrlField source="pair:webPage" />
         </Hero>
         <MarkdownField source="pair:description" />
       </Column>

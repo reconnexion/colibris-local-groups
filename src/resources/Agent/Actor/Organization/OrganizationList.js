@@ -1,15 +1,17 @@
 import React from 'react';
-import { List, SimpleList } from '@semapps/archipelago-layout';
+import { List } from '@semapps/archipelago-layout';
+import { MapList } from '@semapps/geo-components';
 
 const OrganizationList = props => (
   <List title="Annuaire des acteurs" {...props}>
-    <SimpleList
-      primaryText={record => record['pair:label']}
-      secondaryText={record => record['pair:comment']}
-      leftAvatar={record => (
-        <img src={record['image'] || process.env.PUBLIC_URL + '/logo192.png'} width="100%" alt="SemApps" />
-      )}
-      linkType="show"
+    <MapList
+      latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude'] }
+      longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude'] }
+      label={record => record['pair:label']}
+      description={record => record['pair:description']}
+      center={[49.2839, 2.5955]}
+      zoom={11}
+      scrollWheelZoom
     />
   </List>
 );
