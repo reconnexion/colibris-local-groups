@@ -13,3 +13,6 @@ export { default as Document } from './Object/Document';
 // Concepts
 export { default as Theme } from './Concept/Theme';
 export { default as ProjectStatus } from './Concept/ProjectStatus';
+
+// ActivityPub
+export { default as Note } from './ActivityPub/Note';

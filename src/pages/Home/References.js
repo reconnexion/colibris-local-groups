@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { ListBase, useListContext, Link } from 'react-admin';
 import { Button, Box } from '@material-ui/core';
 

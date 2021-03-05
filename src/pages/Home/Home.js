@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Grid, Card, CardContent, makeStyles } from '@material-ui/core';
 import Document from './Document';
 import References from './References';
+import LatestNews from './LatestNews';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -21,6 +22,8 @@ const Home = () => {
           <Grid item xs={9}>
             <CardContent className={classes.document}>
               <Document id="bienvenue-chez-les-colibris-du-pays-creillois" />
+              <br />
+              <LatestNews />
             </CardContent>
           </Grid>
           <Grid item xs={3}>

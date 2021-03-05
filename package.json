@@ -3,6 +3,7 @@
   "version": "0.1.13",
   "private": true,
   "dependencies": {
+    "@semapps/activitypub-components": "0.1.23",
     "@semapps/archipelago-layout": "0.1.23",
     "@semapps/auth-provider": "0.1.23",
     "@semapps/geo-components": "0.1.23",

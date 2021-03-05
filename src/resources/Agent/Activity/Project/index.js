@@ -30,11 +30,14 @@ export default {
         'pair:label': 'Nom',
         'pair:comment': 'Courte description',
         'pair:description': 'Description',
-        'pair:homePage': 'Site web',
-        'pair:involves': 'Participants',
-        'pair:documentedBy': 'Documents',
-        'pair:hasTopic': 'Thèmes',
-        'pair:hasStatus': 'Statut'
+        'pair:aboutPage': 'Site web',
+        'pair:involves': 'Implique',
+        'pair:documentedBy': 'Documenté par',
+        'pair:hasTopic': 'A pour thème',
+        'pair:hasStatus': 'Statut',
+        published: 'Publié',
+        updated: 'Mis à jour',
+        outbox: 'Actualités'
       }
     }
   }
