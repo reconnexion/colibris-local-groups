@@ -1,4 +1,4 @@
-import PairResourceCreate from '../../PairResourceCreate';
+import DocumentCreate from './DocumentCreate';
 import DocumentEdit from './DocumentEdit';
 import DocumentList from './DocumentList';
 import DocumentShow from './DocumentShow';
@@ -8,7 +8,7 @@ export default {
   config: {
     list: DocumentList,
     show: DocumentShow,
-    create: PairResourceCreate,
+    create: DocumentCreate,
     edit: DocumentEdit,
     icon: DescriptionIcon,
     options: {

@@ -9,7 +9,6 @@ export { default as Project } from './Agent/Activity/Project';
 
 // Objects
 export { default as Document } from './Object/Document';
-export { default as Folder } from './Object/Folder';
 
 // Concepts
 export { default as Theme } from './Concept/Theme';
