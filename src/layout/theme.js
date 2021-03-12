@@ -1,7 +1,7 @@
 import { theme } from '@semapps/archipelago-layout';
 
 theme.palette.primary.main = '#afc544';
-theme.palette.secondary.main = '#e8048b';
+theme.palette.secondary.main = '#b40b6f';
 // theme.typography.h1.color = '#e8048b';
 
 export default theme;

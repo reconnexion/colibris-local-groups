@@ -1,15 +1,16 @@
 import React from 'react';
 import { ListBase } from 'react-admin';
-import { AccordionList, MarkdownField, LargeLabel } from '@semapps/archipelago-layout';
+import { AccordionList, LargeLabel } from '@semapps/archipelago-layout';
+import NotePreview from '../../resources/ActivityPub/NotePreview';
 
 export const LatestNews = () => (
   <>
-    <LargeLabel>Dernières actualités</LargeLabel>
-    <ListBase resource="Note" basePath="/Note" sort={{ field: 'published', order: 'ASC' }}>
+    <LargeLabel>Actualités des actions</LargeLabel>
+    <ListBase resource="Note" basePath="/Note" filter={{ 'pair:concerns': process.env.REACT_APP_LOCAL_GROUP_URL }} sort={{ field: 'published', order: 'ASC' }}>
       <AccordionList
         date={record => record && record.published}
         title={record => record && record.name}
-        content={record => <MarkdownField record={record} source="content" />}
+        content={NotePreview}
       />
     </ListBase>
   </>

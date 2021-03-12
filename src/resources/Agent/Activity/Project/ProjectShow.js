@@ -5,6 +5,7 @@ import { Grid } from '@material-ui/core';
 import { UriArrayField } from '@semapps/semantic-data-provider';
 import { ActivitiesList } from '@semapps/activitypub-components';
 import ProjectTitle from './ProjectTitle';
+import NotePreview from "../../../ActivityPub/NotePreview";
 
 const ProjectShow = props => (
   <Show title={<ProjectTitle />} {...props}>
@@ -24,7 +25,7 @@ const ProjectShow = props => (
             <AccordionList
               date={record => record && record.published}
               title={record => record && record.name}
-              content={record => <MarkdownField record={record} source="content" />}
+              content={NotePreview}
             />
           </ActivitiesList>
         </MainList>

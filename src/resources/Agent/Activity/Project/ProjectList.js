@@ -1,9 +1,9 @@
 import React from 'react';
-import { List } from 'react-admin';
+import { List, ShowButton, EditButton } from 'react-admin';
 import { MasonryList } from '@semapps/archipelago-layout';
 import { Typography, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   content: {
     padding: 0
   }
@@ -17,12 +17,13 @@ const ProjectList = props => {
         image={record => record.image}
         content={record => (
           <>
-            <Typography variant="subtitle1">{record['pair:label']}</Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {record['pair:comment']}
+            <Typography variant="h5" color="textPrimary">{record['pair:label']}</Typography>
+            <Typography variant="body2" color="textSecondary">
+              {record['pair:description'].substring(0, 250)}
             </Typography>
           </>
         )}
+        actions={[ShowButton, EditButton]}
         linkType="show"
       />
     </List>

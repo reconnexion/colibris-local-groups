@@ -1511,10 +1511,15 @@
   resolved "https://registry.yarnpkg.com/@redux-saga/types/-/types-1.1.0.tgz#0e81ce56b4883b4b2a3001ebe1ab298b84237204"
   integrity sha512-afmTuJrylUU/0OtqzaRkbyYFFNgCF73Bvel/sw90pvGrWIZ+vyoIJqA6eMSoA6+nb443kTmulmBtC9NerXboNg==
 
-"@semapps/archipelago-layout@0.1.23":
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/@semapps/archipelago-layout/-/archipelago-layout-0.1.23.tgz#0f4f3c020c9ecf8569f49a30aa71480d2256267d"
-  integrity sha512-NSrF5sf0BG9LapYD6GAfRpn8jlf5xeQCm9j4PaYQBwLAC4ryrFIRF8kDYIfI88Mkv3sfymokx99St3S1vCRKYQ==
+"@semapps/activitypub-components@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@semapps/activitypub-components/-/activitypub-components-0.1.26.tgz#4c54f1fdde2a8058370980ab09723b21aa538677"
+  integrity sha512-zqwL5x5GiB2okMZj3BZLACY+ySZVG5RjlOfvM4DC2vdyTHWhjokaYLkJnuwQ0v7EdcgZKLC1xt+KVflodHJ+Qw==
+
+"@semapps/archipelago-layout@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@semapps/archipelago-layout/-/archipelago-layout-0.1.26.tgz#bedda089b46b4266258230253f8a7adfb285e56a"
+  integrity sha512-gABathG9KNvQKXOupRs0xXS4ZeVrPffoZ6DrYBeanz3N88H8EKsRviWTlcC5HO+/JoDqq9yigRKkfydGrjW/Bg==
   dependencies:
     "@material-ui/lab" "^4.0.0-alpha.57"
     autosuggest-highlight "^3.1.1"
@@ -1525,17 +1530,17 @@
     react-markdown "^4.3.1"
     react-masonry-css "^1.0.14"
 
-"@semapps/auth-provider@0.1.23":
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/@semapps/auth-provider/-/auth-provider-0.1.23.tgz#be48dfa58d396cac4387e7cc93e96419b2035b55"
-  integrity sha512-GBWe0rJf0YIVWs1PyPnw9AIpN83L7pHvpEd04EcXmWsw8KPRTHgfXhRpDbTt2c0pfalmkF/0txPzMvmAjg8J/g==
+"@semapps/auth-provider@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@semapps/auth-provider/-/auth-provider-0.1.26.tgz#d89c07b865f94ae7731999e636625c377978039b"
+  integrity sha512-kRj8OxmgWgFw2C95SJhLhRaJKaR2EFtOd/yl3dXL2Z7f5dZ/a4dToV1doTJxcKSTYHC01quz8CG3fouqfUlV7A==
   dependencies:
     jwt-decode "^3.0.0"
 
-"@semapps/geo-components@0.1.23":
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/@semapps/geo-components/-/geo-components-0.1.23.tgz#df129075f3ea3bb8a174f4e43f387ed58b0a00ee"
-  integrity sha512-DqtBkyCgJOYZeDj2jM5r2a2PsvaYsLbf3yipm2lCWdTMgbmjbxj7orEXKEPJOskhtBt0m0abSHnY7Ff0hvBXaQ==
+"@semapps/geo-components@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@semapps/geo-components/-/geo-components-0.1.26.tgz#df557cacc10223fefae066115a0b71907b0be665"
+  integrity sha512-7ETdjoxi+W9Gcj5nD/3JVvLwMbMlizQC9xavW26wNGIaS8MGP4gz9eTNy95X3D7sAJCJtW/oh2+WNFa9J/oDxg==
   dependencies:
     "@material-ui/lab" "^4.0.0-alpha.57"
     autosuggest-highlight "^3.1.1"
@@ -1543,10 +1548,10 @@
     react-leaflet "^3.1.0"
     react-leaflet-markercluster "^3.0.0-rc1"
 
-"@semapps/semantic-data-provider@0.1.23":
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/@semapps/semantic-data-provider/-/semantic-data-provider-0.1.23.tgz#325e5b49388a0764ba3c563ce744a4d3b898a8ab"
-  integrity sha512-YBnge3Bz4CPCsLR7bgaeYfKPLgGspY3Co8rIVA39iYlm7BbxueoBim4Ds4Zzs/DK6Dh97K6wxUKhPK+13Tqv5g==
+"@semapps/semantic-data-provider@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@semapps/semantic-data-provider/-/semantic-data-provider-0.1.26.tgz#0a24fb95a2afe86210138fef6801f64632dc7346"
+  integrity sha512-adjOBcyj7cDN969Ef43A5/zcwwC8yN1LVHFQ5Egqxyn0kDU+ToqPIWXyDowlWrSTjJZ4V2DKUqcx3F+UEQCngg==
   dependencies:
     jsonld "^3.0.1"
     speakingurl "^14.0.1"
@@ -5514,7 +5519,7 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
-history@^4.9.0:
+history@4.10.1, history@^4.9.0:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/history/-/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
   integrity sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==

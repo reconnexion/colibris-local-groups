@@ -6,7 +6,11 @@ export default {
   },
   translations: {
     fr: {
-      name: 'Actualité |||| Actualités'
+      name: 'Actualité |||| Actualités',
+      fields: {
+        content: 'Message',
+        attributedTo: 'Auteur'
+      }
     }
   }
 };
