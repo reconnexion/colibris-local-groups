@@ -1,18 +1,25 @@
 import React from 'react';
-import { Container, Box, Grid, makeStyles, Typography, AppBar as MuiAppBar } from '@material-ui/core';
+import { Container, Box, Grid, makeStyles, Typography, AppBar as MuiAppBar, useMediaQuery, IconButton } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   header: {
     position: 'relative',
-    height: 65
+    padding: 10,
+    height: 65,
+    [theme.breakpoints.down('sm')]: {
+      height: 50
+    }
   },
   logo: {
-    position: 'relative',
-    top: 10,
-    width: 45,
-    height: 45,
-    verticalAlign: 'middle'
+    width: 48,
+    height: 48,
+    verticalAlign: 'middle',
+    [theme.breakpoints.down('sm')]: {
+      width: 32,
+      height: 32,
+    }
   },
   logoText: {
     fontFamily: 'Helvetica',
@@ -20,8 +27,13 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'bold',
     color: theme.palette.common.white,
     verticalAlign: 'middle',
-    position: 'relative',
-    top: 10
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 18,
+    }
+  },
+  openButton: {
+    padding: 5,
+    float: 'right'
   },
   menuLink: {
     textDecoration: 'none'
@@ -35,32 +47,33 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const menuItems = {
-  '/': 'Accueil',
-  '/Project': 'Frise\ndes actions',
-  '/Organization': 'Annuaire\ndes acteurs',
-  '/Event': 'Agenda\npartagé',
-  '/Person': 'Trombino\nscope',
-  '/Document': 'Médiathèque'
-};
-
-const AppBar = ({ userMenu, logout }) => {
+const AppBar = ({ userMenu, logout, menuItems, setSidebarOpen }) => {
   const classes = useStyles();
+  const xs = useMediaQuery(theme => theme.breakpoints.down('xs'));
   return (
     <MuiAppBar position="sticky">
       <Container maxWidth="lg" className={classes.header}>
         <Grid container>
-          <Grid item sm={4}>
+          <Grid item sm={4} xs={10} >
             <Link to="/" className={classes.menuLink}>
               <img src={process.env.PUBLIC_URL + '/colibris-blanc.png'} alt="Colibris" className={classes.logo} />
               <span className={classes.logoText}>Colibris Pays Creillois</span>
             </Link>
           </Grid>
-          <Grid item sm={8} align="right">
+          <Grid item sm={8} xs={2} align="right">
+            {xs ? (
+              <IconButton
+                color="inherit"
+                onClick={() => setSidebarOpen(true)}
+                className={classes.openButton}
+              >
+                <MenuIcon />
+              </IconButton>
+            ) : (
             <Grid container>
               {Object.keys(menuItems).map(link => (
                 <Grid item sm={2} key={link}>
-                  <Box display="flex" height={50} p={1} alignItems="center" justifyContent="center">
+                  <Box display="flex" height={50} alignItems="center" justifyContent="center">
                     <Link to={link} className={classes.menuLink}>
                       <Typography className={classes.menuText}>
                         {menuItems[link].split('\n').map((item, key) => (
@@ -75,6 +88,7 @@ const AppBar = ({ userMenu, logout }) => {
                 </Grid>
               ))}
             </Grid>
+            )}
           </Grid>
         </Grid>
       </Container>

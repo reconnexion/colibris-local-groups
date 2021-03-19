@@ -1,18 +1,12 @@
 import React from 'react';
-import { List } from 'react-admin';
-import { MasonryList } from '@semapps/archipelago-layout';
-import { Typography, makeStyles } from '@material-ui/core';
+import { ListBase } from 'react-admin';
+import { MasonryList, LargeLabel } from '@semapps/archipelago-layout';
+import { Typography } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
-  content: {
-    padding: 0
-  }
-}));
-
-const ProjectList = props => {
-  const classes = useStyles();
-  return (
-    <List title="Frise des actions" component="div" perPage={50} classes={{ content: classes.content }} {...props}>
+const LatestProjectList = () => (
+  <>
+    <LargeLabel>Dernières actions</LargeLabel>
+    <ListBase resource="Project" basePath="/Project" perPage={4} sort={{ field: 'published', order: 'ASC' }}>
       <MasonryList
         image={record => record.image || record['pair:hasTopic']?.[0]?.image || record['pair:hasTopic']?.[1]?.image}
         content={record => (
@@ -23,10 +17,11 @@ const ProjectList = props => {
             </Typography>
           </>
         )}
+        breakpointCols={{ default: 4, 900: 3, 450: 1 }}
         linkType="show"
       />
-    </List>
-  );
-};
+    </ListBase>
+  </>
+);
 
-export default ProjectList;
+export default LatestProjectList;

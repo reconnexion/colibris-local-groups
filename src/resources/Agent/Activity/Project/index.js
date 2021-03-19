@@ -19,6 +19,7 @@ export default {
     types: ['pair:Project'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'projects',
     slugField: 'pair:label',
+    dereference: ['pair:hasTopic'],
     filter: {
       'pair:supportedBy': process.env.REACT_APP_LOCAL_GROUP_URL
     }

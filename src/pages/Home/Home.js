@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Grid, Card, CardContent, makeStyles } from '@material-ui/core';
+import React from 'react';
+import { Card, CardContent, makeStyles } from '@material-ui/core';
 import Document from './Document';
-import References from './References';
 import LatestNews from './LatestNews';
+import LatestProjectList from './LatestProjectList';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -16,24 +16,14 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
   const classes = useStyles();
   return (
-    <>
-      <Card className={classes.card}>
-        <Grid container spacing={3}>
-          <Grid item xs={9}>
-            <CardContent className={classes.document}>
-              <Document id="bienvenue-chez-les-colibris-du-pays-creillois" />
-              <br />
-              <LatestNews />
-            </CardContent>
-          </Grid>
-          <Grid item xs={3}>
-            <CardContent>
-              <References documentUri={process.env.REACT_APP_MIDDLEWARE_URL + 'documents/bienvenue-chez-les-colibris-du-pays-creillois'} />
-            </CardContent>
-          </Grid>
-        </Grid>
-      </Card>
-    </>
+    <Card className={classes.card}>
+      <CardContent className={classes.document}>
+        <Document id="bienvenue-chez-les-colibris-du-pays-creillois" />
+        <br />
+        <LatestProjectList />
+        <LatestNews />
+      </CardContent>
+    </Card>
   );
 };
 

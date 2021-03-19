@@ -30,7 +30,7 @@ export default {
         'pair:description': 'Description',
         'pair:phone': 'Téléphone',
         'pair:aboutPage': 'Page Près de chez nous',
-        'pair:homePage': 'Site web',
+        'pair:webPage': 'Site web',
         image: 'Logo',
         'pair:affiliates': 'Membres',
         'pair:partnerOf': 'Partenaires',
