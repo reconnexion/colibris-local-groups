@@ -19,7 +19,6 @@ export default {
     types: ['pair:Project'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'projects',
     slugField: 'pair:label',
-    dereference: ['pair:hasTopic'],
     filter: {
       'pair:supportedBy': process.env.REACT_APP_LOCAL_GROUP_URL
     }
@@ -31,7 +30,7 @@ export default {
         'pair:label': 'Nom',
         'pair:comment': 'Courte description',
         'pair:description': 'Description',
-        'pair:aboutPage': 'Site web',
+        'pair:homePage': 'Site web',
         'pair:involves': 'Implique',
         'pair:documentedBy': 'Documenté par',
         'pair:hasTopic': 'A pour thème',

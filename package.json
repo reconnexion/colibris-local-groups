@@ -12,9 +12,9 @@
     "markdown-to-jsx": "^7.1.2",
     "prop-types": "^15.7.2",
     "ra-input-markdown": "^1.1.7",
-    "ra-language-french": "^3.13.1",
+    "ra-language-french": "^3.13.5",
     "react": "^16.14.0",
-    "react-admin": "^3.13.1",
+    "react-admin": "^3.13.5",
     "react-dom": "^16.14.0",
     "leaflet": "^1.7.1",
     "leaflet.markercluster": "^1.4.1"

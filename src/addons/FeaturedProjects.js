@@ -3,10 +3,10 @@ import { ListBase } from 'react-admin';
 import { MasonryList } from '@semapps/archipelago-layout';
 import ProjectPreview from "../resources/Agent/Activity/Project/ProjectPreview";
 
-const LatestProjectsList = () => (
-  <ListBase resource="Project" basePath="/Project" perPage={4} sort={{ field: 'published', order: 'ASC' }}>
+const FeaturedProjects = () => (
+  <ListBase resource="Project" basePath="/Project" perPage={4} filter={{ 'pair:hasStatus': process.env.REACT_APP_MIDDLEWARE_URL + 'status/en-vedette' }} sort={{ field: 'published', order: 'ASC' }}>
     <MasonryList
-      image={record => record.image || record['pair:hasTopic']?.[0]?.image || record['pair:hasTopic']?.[1]?.image}
+      image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image}
       content={record => <ProjectPreview record={record} />}
       breakpointCols={{ default: 4, 900: 3, 450: 1 }}
       linkType="show"
@@ -14,4 +14,4 @@ const LatestProjectsList = () => (
   </ListBase>
 );
 
-export default LatestProjectsList;
+export default FeaturedProjects;

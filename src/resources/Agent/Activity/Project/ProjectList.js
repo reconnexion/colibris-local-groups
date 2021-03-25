@@ -1,26 +1,17 @@
 import React from 'react';
 import { List } from 'react-admin';
 import { MasonryList } from '@semapps/archipelago-layout';
-import { makeStyles } from '@material-ui/core';
 import ProjectPreview from "./ProjectPreview";
+import ProjectFilterSidebar from "./ProjectFilterSidebar";
 
-const useStyles = makeStyles(() => ({
-  content: {
-    padding: 0
-  }
-}));
-
-const ProjectList = props => {
-  const classes = useStyles();
-  return (
-    <List title="Frise des actions" component="div" perPage={50} classes={{ content: classes.content }} sort={{ field: 'published', order: 'ASC' }} {...props}>
-      <MasonryList
-        image={record => record.image}
-        content={record => <ProjectPreview record={record} />}
-        linkType="show"
-      />
-    </List>
-  );
-};
+const ProjectList = props => (
+  <List title="Frise des actions" aside={<ProjectFilterSidebar />} perPage={100} pagination={false} sort={{ field: 'published', order: 'ASC' }} {...props}>
+    <MasonryList
+      image={record => record.image}
+      content={record => <ProjectPreview record={record} />}
+      linkType="show"
+    />
+  </List>
+);
 
 export default ProjectList;

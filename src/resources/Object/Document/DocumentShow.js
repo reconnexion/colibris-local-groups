@@ -1,9 +1,11 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 import Markdown from 'markdown-to-jsx';
 import { MainList, Show, LargeLabel } from '@semapps/archipelago-layout';
 import DocumentTitle from './DocumentTitle';
 import * as addons from "../../../addons";
+import useDoubleClick from "../../../layout/useDoubleClick";
 
 const MarkdownField = ({ source, record }) =>
   record && record[source] ? <Markdown options={{
@@ -27,15 +29,21 @@ const MarkdownField = ({ source, record }) =>
     {record[source]}
 </Markdown> : null;
 
-const DocumentShow = props => (
-  <Show title={<DocumentTitle />} {...props}>
-    <>
-      <MainList>
-        <Typography variant="h3" color="primary" component="h1" id="react-admin-title" />
-        <MarkdownField source="pair:description" addLabel={false} />
-      </MainList>
-    </>
-  </Show>
-);
+const DocumentShow = props => {
+  const history = useHistory();
+  const [refCallback] = useDoubleClick(() => history.push(props.basePath + '/' + encodeURIComponent(props.id) + '/edit'));
+  return (
+    <Show title={<DocumentTitle />} {...props}>
+      <>
+        <Box ref={refCallback}>
+          <MainList>
+            <Typography variant="h3" color="primary" component="h1" id="react-admin-title" />
+            <MarkdownField source="pair:description" addLabel={false} />
+          </MainList>
+        </Box>
+      </>
+    </Show>
+  );
+}
 
 export default DocumentShow;

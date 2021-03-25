@@ -1,5 +1,5 @@
 import React from 'react';
-import { UriArrayInput } from '@semapps/semantic-data-provider';
+import { ReferenceArrayInput } from '@semapps/semantic-data-provider';
 import { AutocompleteArrayInput } from 'react-admin';
 import * as resources from './resources';
 
@@ -28,67 +28,67 @@ const selectOptionTextByType = resource => {
 };
 
 export const OrganizationsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Organization" source={source}>
+  <ReferenceArrayInput label={label} reference="Organization" source={source}>
     <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );
 
 export const ActorsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Actor" source={source}>
+  <ReferenceArrayInput label={label} reference="Actor" source={source}>
     <AutocompleteArrayInput
       optionText={selectOptionTextByType}
       shouldRenderSuggestions={value => value.length > 1}
       fullWidth
     />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );
 
 export const ActivitiesInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Activity" source={source}>
+  <ReferenceArrayInput label={label} reference="Activity" source={source}>
     <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );
 
 export const DocumentsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Document" source={source}>
+  <ReferenceArrayInput label={label} reference="Document" source={source}>
     <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );
 
 export const EventsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Event" source={source}>
+  <ReferenceArrayInput label={label} reference="Event" source={source}>
     <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
-  </UriArrayInput>
-);
-
-export const SkillsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Skill" source={source}>
-    <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );
 
 export const ThemesInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Theme" source={source}>
+  <ReferenceArrayInput label={label} reference="Theme" source={source}>
     <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
-  </UriArrayInput>
+  </ReferenceArrayInput>
+);
+
+export const StatusInput = ({ label, source }) => (
+  <ReferenceArrayInput label={label} reference="Status" source={source}>
+    <AutocompleteArrayInput optionText="pair:label" fullWidth />
+  </ReferenceArrayInput>
 );
 
 export const PersonsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Person" source={source}>
+  <ReferenceArrayInput label={label} reference="Person" source={source}>
     <AutocompleteArrayInput
       optionText={record => record && record.name}
       shouldRenderSuggestions={value => value.length > 1}
       fullWidth
     />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );
 
 export const AgentsInput = ({ label, source }) => (
-  <UriArrayInput label={label} reference="Agent" source={source}>
+  <ReferenceArrayInput label={label} reference="Agent" source={source}>
     <AutocompleteArrayInput
       optionText={selectOptionTextByType}
       shouldRenderSuggestions={value => value.length > 1}
       fullWidth
     />
-  </UriArrayInput>
+  </ReferenceArrayInput>
 );

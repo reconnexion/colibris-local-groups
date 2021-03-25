@@ -18,14 +18,14 @@ const ThemeShow = props => (
             <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
           </GridList>
         </ReferenceArrayField>
-        <ReferenceArrayField label="Acteurs" reference="Organization" filter={{ type: 'pair:Organization' }} source="pair:topicOf">
+        <ReferenceArrayField label="Acteurs locaux" reference="Organization" filter={{ type: 'pair:Organization' }} source="pair:topicOf">
           <Datagrid rowClick="show">
             <TextField source="pair:label" />
           </Datagrid>
         </ReferenceArrayField>
         <ReferenceArrayField label="Projets La Fabrique" reference="Project" filter={{ type: 'pair:Project', 'pair:supportedBy': "http://localhost:3000/services/lafabrique", }} source="pair:topicOf">
           <MasonryList
-            image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image || record?.['pair:hasTopic']?.[0]?.image || record?.['pair:hasTopic']?.[1]?.image}
+            image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image}
             content={record => <ProjectPreview record={record} />}
             breakpointCols={{ default: 4, 900: 3, 450: 1 }}
             linkType="show"
