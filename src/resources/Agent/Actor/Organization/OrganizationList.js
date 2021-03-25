@@ -3,7 +3,7 @@ import { List } from '@semapps/archipelago-layout';
 import { MapList } from '@semapps/geo-components';
 
 const OrganizationList = props => (
-  <List title="Annuaire des acteurs" {...props}>
+  <List title="Annuaire des acteurs" perPage={500} pagination={false} {...props}>
     <MapList
       latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude'] }
       longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude'] }

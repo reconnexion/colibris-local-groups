@@ -10,7 +10,7 @@ import * as resources from './resources';
 import Layout from './layout/Layout';
 import theme from './layout/theme';
 import LoginPage from './layout/LoginPage';
-import Home from './pages/Home/Home';
+import Home from './layout/Home';
 
 const history = createBrowserHistory();
 

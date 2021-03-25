@@ -1,6 +1,6 @@
 import React from 'react';
 import { DateField, UrlField, TextField } from 'react-admin';
-import { MainList, Hero, Show, MarkdownField, AccordionList, SeparatedListField } from '@semapps/archipelago-layout';
+import { MainList, Hero, Show, MarkdownField, AccordionList, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField, ReferenceField } from '@semapps/semantic-data-provider';
 import { ActivitiesList } from '@semapps/activitypub-components';
 import ProjectTitle from './ProjectTitle';
@@ -23,7 +23,12 @@ const ProjectShow = props => (
         <UrlField source="pair:aboutPage" />
       </Hero>
       <MainList>
-        <MarkdownField source="pair:description" />
+        <MarkdownField source="pair:description" addLabel={false} />
+        <ReferenceArrayField reference="Person" source="pair:involves">
+          <GridList xs={2} linkType="show">
+            <AvatarField label={record => `${record['pair:firstName']} ${record['pair:lastName']}`} image="pair:image" labelColor="#afc544" />
+          </GridList>
+        </ReferenceArrayField>
         <ActivitiesList source="outbox">
           <AccordionList
             date={record => record && record.published}

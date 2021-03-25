@@ -26,9 +26,9 @@ export default {
         'pair:firstName': 'Prénom',
         'pair:lastName': 'Nom de famille',
         'pair:image': 'Photo',
-        'pair:involvedIn': 'Participe à',
-        'pair:affiliatedBy': 'Organisations',
-        'pair:offers': 'Compétences',
+        'pair:hasLocation': 'Localisation',
+        'pair:involvedIn': 'Impliqué dans',
+        'pair:affiliatedBy': 'Membre de',
         'pair:hasTopic': 'Intérêts'
       }
     }

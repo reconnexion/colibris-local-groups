@@ -16,7 +16,7 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:Organization'],
+    types: ['pair:Organization', 'pair:Group'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'organizations',
     dereference: ['pair:hasLocation/pair:hasPostalAddress'],
     slugField: 'pair:label'
@@ -32,6 +32,7 @@ export default {
         'pair:aboutPage': 'Page Près de chez nous',
         'pair:webPage': 'Site web',
         image: 'Logo',
+        'pair:hasLocation': 'Adresse',
         'pair:affiliates': 'Membres',
         'pair:partnerOf': 'Partenaires',
         'pair:involvedIn': 'Participe à',

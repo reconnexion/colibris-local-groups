@@ -6,7 +6,7 @@ import { ImageField } from '@semapps/semantic-data-provider';
 import PersonTitle from './PersonTitle';
 
 export const PersonEdit = props => (
-  <Edit title={<PersonTitle />} {...props}>
+  <Edit title={<PersonTitle />} transform={data => ({ ...data, 'pair:label': `${data['pair:firstName']} ${data['pair:lastName']?.toUpperCase()}`})} {...props}>
     <SimpleForm redirect="show">
       <TextInput source="pair:firstName" fullWidth />
       <TextInput source="pair:lastName" fullWidth />
@@ -15,7 +15,6 @@ export const PersonEdit = props => (
       </ImageInput>
       <ActivitiesInput source="pair:involvedIn" />
       <OrganizationsInput source="pair:affiliatedBy" />
-      <SkillsInput source="pair:offers" />
       <ThemesInput source="pair:hasTopic" />
     </SimpleForm>
   </Edit>

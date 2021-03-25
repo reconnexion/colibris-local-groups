@@ -12,8 +12,9 @@ const useStyles = makeStyles(theme => ({
   },
   userMenu: {
     float: 'right',
-    marginTop: theme.spacing(2),
-    backgroundColor: theme.palette.secondary.main,
+    marginTop: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    backgroundColor: theme.palette.grey["200"],
     '& button': {
       padding: '6px 12px'
     }
@@ -52,9 +53,9 @@ const Layout = ({ appBar, logout, theme, children }) => {
       <SideMenu menuItems={menuItems} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       {!xs && (
         <Box width={1} height="90px" className={classes.hero}>
-          <Container>
+          {/*<Container>*/}
             <UserMenu logout={<LogoutButton />} classes={{ user: classes.userMenu }} />
-          </Container>
+          {/*</Container>*/}
         </Box>
       )}
       {React.cloneElement(appBar, { logout, menuItems, setSidebarOpen })}
