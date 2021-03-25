@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Notification } from 'react-admin';
 import { Container, Box, useMediaQuery, ThemeProvider, makeStyles, Typography } from '@material-ui/core';
+import { UserMenu, LogoutButton } from '@semapps/auth-provider';
 import AppBar from './AppBar';
 import ScrollToTop from './ScrollToTop';
 import SideMenu from './SideMenu';
@@ -8,6 +9,14 @@ import SideMenu from './SideMenu';
 const useStyles = makeStyles(theme => ({
   hero: {
     backgroundImage: `url('${process.env.PUBLIC_URL}/bandeau.jpg')`
+  },
+  userMenu: {
+    float: 'right',
+    marginTop: theme.spacing(2),
+    backgroundColor: theme.palette.secondary.main,
+    '& button': {
+      padding: '6px 12px'
+    }
   },
   title: {
     position: 'absolute',
@@ -42,7 +51,11 @@ const Layout = ({ appBar, logout, theme, children }) => {
       <ScrollToTop />
       <SideMenu menuItems={menuItems} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       {!xs && (
-        <Box width={1} height="90px" className={classes.hero} />
+        <Box width={1} height="90px" className={classes.hero}>
+          <Container>
+            <UserMenu logout={<LogoutButton />} classes={{ user: classes.userMenu }} />
+          </Container>
+        </Box>
       )}
       {React.cloneElement(appBar, { logout, menuItems, setSidebarOpen })}
       <Container maxWidth="lg" disableGutters={xs}>

@@ -1,4 +1,3 @@
-import PersonCreate from './PersonCreate';
 import PersonEdit from './PersonEdit';
 import PersonList from './PersonList';
 import PersonShow from './PersonShow';
@@ -8,7 +7,6 @@ export default {
   config: {
     list: PersonList,
     show: PersonShow,
-    create: PersonCreate,
     edit: PersonEdit,
     icon: PersonIcon,
     options: {
@@ -16,8 +14,9 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:Person'],
+    types: ['foaf:Person'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'users',
+    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
     slugField: ['pair:firstName', 'pair:lastName']
   },
   translations: {
@@ -26,7 +25,7 @@ export default {
       fields: {
         'pair:firstName': 'Prénom',
         'pair:lastName': 'Nom de famille',
-        image: 'Photo',
+        'pair:image': 'Photo',
         'pair:involvedIn': 'Participe à',
         'pair:affiliatedBy': 'Organisations',
         'pair:offers': 'Compétences',

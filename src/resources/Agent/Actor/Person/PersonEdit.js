@@ -10,7 +10,7 @@ export const PersonEdit = props => (
     <SimpleForm redirect="show">
       <TextInput source="pair:firstName" fullWidth />
       <TextInput source="pair:lastName" fullWidth />
-      <ImageInput source="image" accept="image/*">
+      <ImageInput source="pair:image" accept="image/*">
         <ImageField source="src" />
       </ImageInput>
       <ActivitiesInput source="pair:involvedIn" />

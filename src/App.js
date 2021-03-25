@@ -1,7 +1,7 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
 import { createBrowserHistory } from 'history';
-import { authProvider, LoginPage, LogoutButton } from '@semapps/auth-provider';
+import { authProvider, LogoutButton } from '@semapps/auth-provider';
 
 import i18nProvider from './config/i18nProvider';
 import dataProvider from './config/dataProvider';
@@ -9,6 +9,7 @@ import * as resources from './resources';
 
 import Layout from './layout/Layout';
 import theme from './layout/theme';
+import LoginPage from './layout/LoginPage';
 import Home from './pages/Home/Home';
 
 const history = createBrowserHistory();
