@@ -1,5 +1,4 @@
 import React from 'react';
-import { Typography } from "@material-ui/core";
 import { TextField, Datagrid } from 'react-admin';
 import { MainList, Hero, Show, MarkdownField, GridList, AvatarField, MasonryList } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
@@ -16,7 +15,7 @@ const ThemeShow = props => (
         <MarkdownField source="pair:description" addLabel={false} />
         <ReferenceArrayField label="Personnes" reference="Person" filter={{ type: 'Person' }} source="pair:topicOf">
           <GridList xs={2} linkType="show">
-            <AvatarField label={record => `${record['pair:firstName']} ${record['pair:lastName']}`} image="pair:image" labelColor="#afc544" />
+            <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
           </GridList>
         </ReferenceArrayField>
         <ReferenceArrayField label="Acteurs" reference="Organization" filter={{ type: 'pair:Organization' }} source="pair:topicOf">

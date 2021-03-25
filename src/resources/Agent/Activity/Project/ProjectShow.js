@@ -26,7 +26,7 @@ const ProjectShow = props => (
         <MarkdownField source="pair:description" addLabel={false} />
         <ReferenceArrayField reference="Person" source="pair:involves">
           <GridList xs={2} linkType="show">
-            <AvatarField label={record => `${record['pair:firstName']} ${record['pair:lastName']}`} image="pair:image" labelColor="#afc544" />
+            <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
           </GridList>
         </ReferenceArrayField>
         <ActivitiesList source="outbox">

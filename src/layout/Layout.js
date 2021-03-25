@@ -53,9 +53,9 @@ const Layout = ({ appBar, logout, theme, children }) => {
       <SideMenu menuItems={menuItems} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       {!xs && (
         <Box width={1} height="90px" className={classes.hero}>
-          {/*<Container>*/}
+          <Container>
             <UserMenu logout={<LogoutButton />} classes={{ user: classes.userMenu }} />
-          {/*</Container>*/}
+          </Container>
         </Box>
       )}
       {React.cloneElement(appBar, { logout, menuItems, setSidebarOpen })}

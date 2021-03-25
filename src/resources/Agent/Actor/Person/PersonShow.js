@@ -1,6 +1,5 @@
 import React from 'react';
-import {Datagrid, TextField} from 'react-admin';
-import { Typography } from "@material-ui/core";
+import { TextField } from 'react-admin';
 import { Hero, Show, MainList, SeparatedListField, MasonryList } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
 import { MapField } from "@semapps/geo-components";
