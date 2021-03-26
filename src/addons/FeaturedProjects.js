@@ -8,7 +8,7 @@ const FeaturedProjects = () => (
     <MasonryList
       image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image}
       content={record => <ProjectPreview record={record} />}
-      breakpointCols={{ default: 4, 900: 3, 450: 1 }}
+      breakpointCols={{ default: 4, 1200: 3, 1000: 2, 700: 1 }}
       linkType="show"
     />
   </ListBase>

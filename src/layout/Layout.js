@@ -26,10 +26,11 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
-      top: 75,
-      left: 10,
-      right: 10,
-      fontSize: 30
+      top: 70,
+      left: 15,
+      right: 50,
+      fontSize: 22,
+      zIndex: 10
     }
   }
 }));
