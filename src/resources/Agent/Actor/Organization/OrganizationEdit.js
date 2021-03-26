@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleForm, TextInput, ImageInput } from 'react-admin';
-import MarkdownInput from 'ra-input-markdown';
+import MarkdownInput from '../../../../markdown/MarkdownInput'
 import { Edit } from '@semapps/archipelago-layout';
 import { ImageField } from '@semapps/semantic-data-provider';
 import { PersonsInput, OrganizationsInput, EventsInput, ThemesInput, DocumentsInput } from '../../../../inputs';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleForm, TextInput, DateTimeInput } from 'react-admin';
-import MarkdownInput from 'ra-input-markdown';
+import MarkdownInput from '../../../../markdown/MarkdownInput'
 import { Edit } from '@semapps/archipelago-layout';
 import { ActorsInput, ThemesInput } from '../../../../inputs';
 import EventTitle from './EventTitle';

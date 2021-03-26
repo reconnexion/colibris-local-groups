@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageInput, SimpleForm, TextInput } from 'react-admin';
-import MarkdownInput from 'ra-input-markdown';
+import MarkdownInput from '../../../../markdown/MarkdownInput'
 import { Edit } from '@semapps/archipelago-layout';
 import { DocumentsInput, ThemesInput, StatusInput } from '../../../../inputs';
 import ProjectTitle from './ProjectTitle';

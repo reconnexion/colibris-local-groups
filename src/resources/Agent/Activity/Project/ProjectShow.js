@@ -1,8 +1,9 @@
 import React from 'react';
 import { DateField, UrlField, TextField } from 'react-admin';
-import { MainList, Hero, Show, MarkdownField, AccordionList, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
+import { MainList, Hero, Show, AccordionList, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
 import { ActivitiesList } from '@semapps/activitypub-components';
+import MarkdownField from "../../../../markdown/MarkdownField";
 import ProjectTitle from './ProjectTitle';
 import NotePreview from "../../../ActivityPub/NotePreview";
 

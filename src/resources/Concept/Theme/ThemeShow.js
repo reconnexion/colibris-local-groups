@@ -1,7 +1,8 @@
 import React from 'react';
 import { TextField, Datagrid } from 'react-admin';
-import { MainList, Hero, Show, MarkdownField, GridList, AvatarField, MasonryList } from '@semapps/archipelago-layout';
+import { MainList, Hero, Show, GridList, AvatarField, MasonryList } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
+import MarkdownField from "../../../markdown/MarkdownField";
 import ThemeTitle from './ThemeTitle';
 import ProjectPreview from "../../Agent/Activity/Project/ProjectPreview";
 

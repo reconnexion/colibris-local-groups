@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useQueryWithStore, Loading, Error, Link, Title } from 'react-admin';
-import { MarkdownField } from '@semapps/archipelago-layout';
+import MarkdownField from "../../markdown/MarkdownField";
 import FooterInfo from './FooterInfo';
 
 const Document = ({ id }) => {

@@ -1,8 +1,9 @@
 import React from 'react';
 import { TextField, UrlField } from 'react-admin';
-import { Hero, MainList, Show, MarkdownField, SeparatedListField } from '@semapps/archipelago-layout';
+import { Hero, MainList, Show, SeparatedListField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from "@semapps/semantic-data-provider";
 import { MapField } from "@semapps/geo-components";
+import MarkdownField from "../../../../markdown/MarkdownField";
 import OrganizationTitle from './OrganizationTitle';
 
 const OrganizationShow = props => (
