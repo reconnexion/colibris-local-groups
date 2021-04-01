@@ -1,9 +1,12 @@
 import React from 'react';
-import { SimpleForm, TextInput, DateTimeInput } from 'react-admin';
+import { SimpleForm, TextInput } from 'react-admin';
 import MarkdownInput from '../../../../markdown/MarkdownInput'
 import { Edit } from '@semapps/archipelago-layout';
+import { DateTimeInput } from '@semapps/date-components';
 import { ActorsInput, ThemesInput } from '../../../../inputs';
 import EventTitle from './EventTitle';
+import frLocale from "date-fns/locale/fr";
+import PairLocationInput from "../../../../pair/PairLocationInput";
 
 const EventEdit = props => (
   <Edit title={<EventTitle />} {...props}>
@@ -12,10 +15,31 @@ const EventEdit = props => (
       <TextInput source="pair:comment" fullWidth />
       <MarkdownInput multiline source="pair:description" fullWidth />
       <TextInput source="pair:aboutPage" fullWidth />
-      <DateTimeInput source="pair:startDate" fullWidth />
-      <DateTimeInput source="pair:endDate" fullWidth />
+      <DateTimeInput
+        source="pair:startDate"
+        options={{
+          format: 'dd/MM/yyyy à HH:mm',
+          ampm: false
+        }}
+        providerOptions={{
+          locale: frLocale
+        }}
+        fullWidth
+      />
+      <DateTimeInput
+        source="pair:endDate"
+        options={{
+          format: 'dd/MM/yyyy à HH:mm',
+          ampm: false
+        }}
+        providerOptions={{
+          locale: frLocale
+        }}
+        fullWidth
+      />
       <ActorsInput source="pair:involves" />
       <ThemesInput source="pair:hasTopic" />
+      <PairLocationInput source="pair:hasLocation" fullWidth />
     </SimpleForm>
   </Edit>
 );

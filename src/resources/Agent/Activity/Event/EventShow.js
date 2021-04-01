@@ -1,45 +1,35 @@
 import React from 'react';
-import { ChipField, SingleFieldList, TextField, UrlField, DateField } from 'react-admin';
-import { Column, ColumnShowLayout, Hero, Show, GridList, UserIcon } from '@semapps/archipelago-layout';
-import { UriArrayField } from '@semapps/semantic-data-provider';
+import { TextField, UrlField, DateField } from 'react-admin';
+import { Hero, Show, MainList, SeparatedListField } from '@semapps/archipelago-layout';
+import { ReferenceArrayField } from '@semapps/semantic-data-provider';
+import { MapField } from '@semapps/geo-components';
 import MarkdownField from "../../../../markdown/MarkdownField";
 import EventTitle from './EventTitle';
 
 const EventShow = props => (
   <Show title={<EventTitle />} {...props}>
-    <ColumnShowLayout>
-      <Column xs={12} sm={9}>
-        <Hero>
-          <TextField source="pair:comment" />
-          <DateField source="pair:startDate" showTime />
-          <DateField source="pair:endDate" showTime />
-          <UrlField source="pair:aboutPage" />
-        </Hero>
+    <>
+      <Hero>
+        <TextField source="pair:comment" />
+        <DateField source="pair:startDate" showTime />
+        <DateField source="pair:endDate" showTime />
+        <UrlField source="pair:aboutPage" />
+        <ReferenceArrayField reference="Theme" source="pair:hasTopic">
+          <SeparatedListField linkType="show">
+            <TextField source="pair:label" />
+          </SeparatedListField>
+        </ReferenceArrayField>
+      </Hero>
+      <MainList>
         <MarkdownField source="pair:description" />
-      </Column>
-      <Column xs={12} sm={3} showLabel>
-        <UriArrayField
-          label="Organisations"
-          reference="Organization"
-          filter={{ '@type': 'pair:Organization' }}
-          source="pair:involves"
-        >
-          <SingleFieldList linkType="show">
-            <ChipField source="pair:label" color="secondary" />
-          </SingleFieldList>
-        </UriArrayField>
-        <UriArrayField label="Personnes" reference="User" filter={{ '@type': 'pair:Person' }} source="pair:involves">
-          <GridList xs={6} linkType="show">
-            <UserIcon />
-          </GridList>
-        </UriArrayField>
-        <UriArrayField reference="Theme" source="pair:hasTopic">
-          <SingleFieldList linkType={false}>
-            <ChipField source="pair:label" color="secondary" />
-          </SingleFieldList>
-        </UriArrayField>
-      </Column>
-    </ColumnShowLayout>
+        <MapField
+          source="pair:hasLocation"
+          address={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:label']}
+          latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude']}
+          longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude']}
+        />
+      </MainList>
+    </>
   </Show>
 );
 

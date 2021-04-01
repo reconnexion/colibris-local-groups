@@ -1,4 +1,4 @@
-import PairResourceCreate from '../../../PairResourceCreate';
+import PairResourceCreate from '../../../../pair/PairResourceCreate';
 import EventEdit from './EventEdit';
 import EventList from './EventList';
 import EventShow from './EventShow';
@@ -18,7 +18,8 @@ export default {
   dataModel: {
     types: ['pair:Event'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'events',
-    slugField: 'pair:label'
+    slugField: 'pair:label',
+    dereference: ['as:location/schema:address']
   },
   translations: {
     fr: {
@@ -30,6 +31,7 @@ export default {
         'pair:aboutPage': 'Site web',
         'pair:startDate': 'Date de début',
         'pair:endDate': 'Date de fin',
+        'pair:hasLocation': 'Adresse',
         'pair:involves': 'Participants',
         'pair:hasTopic': 'Thèmes'
       }

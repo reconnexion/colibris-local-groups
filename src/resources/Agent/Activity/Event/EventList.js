@@ -1,6 +1,8 @@
 import React from 'react';
 import { DateField } from 'react-admin';
+import { Avatar } from '@material-ui/core';
 import { List, SimpleList } from '@semapps/archipelago-layout';
+import EventIcon from '@material-ui/icons/Event';
 
 const EventList = props => (
   <List {...props}>
@@ -14,7 +16,11 @@ const EventList = props => (
           <DateField record={record} source="pair:endDate" showTime />
         </>
       )}
-      leftAvatar={() => <img src={process.env.PUBLIC_URL + '/logo192.png'} width="100%" alt="SemApps" />}
+      leftAvatar={() =>
+        <Avatar width="100%">
+          <EventIcon />
+        </Avatar>
+      }
       linkType="show"
     />
   </List>
