@@ -22,6 +22,7 @@ const ThemeShow = props => (
         <ReferenceArrayField label="Acteurs locaux" reference="Organization" filter={{ type: 'pair:Organization' }} source="pair:topicOf">
           <Datagrid rowClick="show">
             <TextField source="pair:label" />
+            <TextField source="pair:hasLocation.pair:label" />
           </Datagrid>
         </ReferenceArrayField>
         <ReferenceArrayField label="Projets La Fabrique" reference="Project" filter={{ type: 'pair:Project', 'pair:supportedBy': "http://localhost:3000/services/lafabrique", }} source="pair:topicOf">
