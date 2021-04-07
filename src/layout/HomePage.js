@@ -2,7 +2,7 @@ import React from 'react';
 import { useShowController, ShowContextProvider } from 'react-admin';
 import DocumentShow from "../resources/Object/Document/DocumentShow";
 
-const Home = () => {
+const HomePage = () => {
   const config = {
     basePath: '/Document',
     id: process.env.REACT_APP_MIDDLEWARE_URL + 'documents/bienvenue-chez-les-colibris-du-pays-creillois',
@@ -16,4 +16,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

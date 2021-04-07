@@ -1,6 +1,7 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
 import { createBrowserHistory } from 'history';
+import { Route } from 'react-router-dom';
 import { authProvider, LogoutButton } from '@semapps/auth-provider';
 
 import i18nProvider from './config/i18nProvider';
@@ -10,7 +11,8 @@ import * as resources from './resources';
 import Layout from './layout/Layout';
 import theme from './layout/theme';
 import LoginPage from './layout/LoginPage';
-import Home from './layout/Home';
+import AboutPage from './layout/AboutPage';
+import HomePage from './layout/HomePage';
 
 const history = createBrowserHistory();
 
@@ -24,7 +26,10 @@ const App = () => (
     history={history}
     loginPage={LoginPage}
     logoutButton={LogoutButton}
-    dashboard={Home}
+    dashboard={HomePage}
+    customRoutes={[
+      <Route exact path="/QuiSommesNous" component={AboutPage} />,
+    ]}
   >
     {Object.entries(resources).map(([key, resource]) => (
       <Resource key={key} name={key} {...resource.config} />

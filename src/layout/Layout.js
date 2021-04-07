@@ -37,10 +37,10 @@ const useStyles = makeStyles(theme => ({
 
 const menuItems = {
   '/': 'Accueil',
+  '/QuiSommesNous': 'Qui sommes-nous ?',
   '/Project': 'Frise\ndes actions',
-  '/Organization': 'Annuaire\ndes acteurs',
+  '/Organization': 'Carte\ndes acteurs',
   '/Event': 'Agenda\npartagé',
-  '/Person': 'Trombino\nscope',
   '/Document': 'Médiathèque'
 };
 
