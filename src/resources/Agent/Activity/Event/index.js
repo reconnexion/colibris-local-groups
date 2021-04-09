@@ -19,7 +19,7 @@ export default {
     types: ['pair:Event'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'events',
     slugField: 'pair:label',
-    dereference: ['as:location/schema:address']
+    dereference: ['pair:hasLocation/pair:hasPlace']
   },
   translations: {
     fr: {

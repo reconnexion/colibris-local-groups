@@ -1,17 +1,17 @@
 import React from 'react';
 import { useShowController, ShowContextProvider } from 'react-admin';
-import DocumentShow from "../resources/Object/Document/DocumentShow";
+import PageShow from "../resources/Page/PageShow";
 
 const HomePage = () => {
   const config = {
-    basePath: '/Document',
-    id: process.env.REACT_APP_MIDDLEWARE_URL + 'documents/bienvenue-chez-les-colibris-du-pays-creillois',
-    resource: 'Document'
+    basePath: '/Page',
+    id: process.env.REACT_APP_LOCAL_GROUP_CODS + 'pages/bienvenue',
+    resource: 'Page'
   };
 
   return(
     <ShowContextProvider value={useShowController(config)}>
-      <DocumentShow {...config} />
+      <PageShow {...config} />
     </ShowContextProvider>
   );
 };

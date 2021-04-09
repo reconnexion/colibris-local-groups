@@ -4,7 +4,7 @@ import { MapList } from '@semapps/geo-components';
 import OrganizationFilterSidebar from "./OrganizationFilterSidebar";
 
 const OrganizationList = props => (
-  <List title="Annuaire des acteurs" aside={<OrganizationFilterSidebar />} perPage={500} pagination={false} {...props}>
+  <List title="Carte des acteurs" aside={<OrganizationFilterSidebar />} perPage={500} pagination={false} {...props}>
     <MapList
       latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude'] }
       longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude'] }

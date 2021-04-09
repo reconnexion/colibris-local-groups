@@ -1,29 +1,28 @@
 import PairResourceCreate from '../../../../pair/PairResourceCreate';
-import OrganizationEdit from './OrganizationEdit';
-import OrganizationList from './OrganizationList';
-import OrganizationShow from './OrganizationShow';
-import HomeIcon from '@material-ui/icons/Home';
+import GroupEdit from './GroupEdit';
+import GroupList from './GroupList';
+import GroupShow from './GroupShow';
+import GroupIcon from '@material-ui/icons/Group';
 
 export default {
   config: {
-    list: OrganizationList,
-    show: OrganizationShow,
+    list: GroupList,
+    show: GroupShow,
     create: PairResourceCreate,
-    edit: OrganizationEdit,
-    icon: HomeIcon,
+    edit: GroupEdit,
+    icon: GroupIcon,
     options: {
-      label: 'Organisations'
+      label: 'Groupes'
     }
   },
   dataModel: {
-    types: ['pair:Organization'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'organizations',
-    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
+    types: ['pair:Group'],
+    containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'groups',
     slugField: 'pair:label'
   },
   translations: {
     fr: {
-      name: 'Organisation |||| Organisations',
+      name: 'Groupe |||| Groupes',
       fields: {
         'pair:label': 'Nom',
         'pair:comment': 'Courte description',

@@ -5,7 +5,7 @@ import { List, SimpleList } from '@semapps/archipelago-layout';
 import EventIcon from '@material-ui/icons/Event';
 
 const EventList = props => (
-  <List {...props}>
+  <List title="Agenda partagé" {...props}>
     <SimpleList
       primaryText={record => record['pair:label']}
       secondaryText={record => (
