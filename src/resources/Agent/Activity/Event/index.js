@@ -17,7 +17,7 @@ export default {
   },
   dataModel: {
     types: ['pair:Event'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'events',
+    containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'events',
     slugField: 'pair:label',
     dereference: ['pair:hasLocation/pair:hasPlace']
   },

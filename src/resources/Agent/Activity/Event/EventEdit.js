@@ -3,7 +3,7 @@ import { SimpleForm, TextInput } from 'react-admin';
 import MarkdownInput from '../../../../markdown/MarkdownInput'
 import { Edit } from '@semapps/archipelago-layout';
 import { DateTimeInput } from '@semapps/date-components';
-import { ActorsInput, ThemesInput } from '../../../../inputs';
+import { PersonsInput, ThemesInput } from '../../../../inputs';
 import EventTitle from './EventTitle';
 import frLocale from "date-fns/locale/fr";
 import PairLocationInput from "../../../../pair/PairLocationInput";
@@ -37,7 +37,7 @@ const EventEdit = props => (
         }}
         fullWidth
       />
-      <ActorsInput source="pair:involves" />
+      <PersonsInput source="pair:involves" />
       <ThemesInput source="pair:hasTopic" />
       <PairLocationInput source="pair:hasLocation" fullWidth />
     </SimpleForm>

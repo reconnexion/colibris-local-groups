@@ -19,7 +19,7 @@ const CardList = ({ record }) => {
   const classes = useStyles();
   return(
     <Card className={classes.card} variant="outlined">
-      <a href={record['pair:webPage']} target="_blank" className={classes.link}>
+      <a href={record['pair:webPage']} target="_blank" rel="noopener noreferrer" className={classes.link}>
         <CardActionArea>
           <CardMedia image={record.image} className={classes.media} />
           <CardContent>

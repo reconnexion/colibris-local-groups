@@ -1,15 +1,11 @@
 import React from 'react';
-import { TextField, Datagrid, TabbedShowLayout, Tab } from 'react-admin';
 import { makeStyles } from "@material-ui/core";
-import { MainList, Show, GridList, AvatarField, MasonryList } from '@semapps/archipelago-layout';
-import { ReferenceArrayField } from '@semapps/semantic-data-provider';
-import MarkdownField from "../../../markdown/MarkdownField";
+import { Show, InverseReferenceShowLayout, ListTab, GridList, AvatarField, MasonryList } from '@semapps/archipelago-layout';
+import { MapList } from "@semapps/geo-components";
 import ThemeTitle from './ThemeTitle';
 import ProjectPreview from "../../Agent/Activity/Project/ProjectPreview";
-import TabbedTypeField from "./TabbedTypeField";
-import ContainerTab from "./ContainerTab";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   card: {
     padding: 0
   }
@@ -19,33 +15,61 @@ const ThemeShow = props => {
   const classes = useStyles();
   return (
     <Show title={<ThemeTitle />} classes={{ card: classes.card }} {...props}>
-      <TabbedShowLayout>
-        <Tab label="Personnes">
-          <ReferenceArrayField reference="Person" filter={{ type: 'Person' }} source="pair:topicOf" addLabel={false}>
-            <GridList xs={2} linkType="show">
-              <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
-            </GridList>
-          </ReferenceArrayField>
-        </Tab>
-        <Tab label="Acteurs locaux">
-          <ReferenceArrayField reference="Organization" filter={{ type: 'pair:Organization' }} source="pair:topicOf" addLabel={false}>
-            <Datagrid rowClick="show">
-              <TextField source="pair:label" />
-              <TextField source="pair:hasLocation.pair:label" />
-            </Datagrid>
-          </ReferenceArrayField>
-        </Tab>
-        <Tab label="Projets La Fabrique">
-          <ReferenceArrayField label="Projets La Fabrique" reference="Project" filter={{ type: 'pair:Project', 'pair:supportedBy': "http://localhost:3000/services/lafabrique", }} source="pair:topicOf" addLabel={false}>
-            <MasonryList
-              image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image}
-              content={record => <ProjectPreview record={record} />}
-              breakpointCols={{ default: 4, 900: 3, 450: 1 }}
-              linkType="show"
-            />
-          </ReferenceArrayField>
-        </Tab>
-      </TabbedShowLayout>
+      <InverseReferenceShowLayout>
+        <ListTab
+          label="Actions"
+          resource="Project"
+          basePath="/Project"
+          inversePredicate="pair:hasTopic"
+          filter={{ 'pair:supportedBy': process.env.REACT_APP_LOCAL_GROUP_URL }}
+        >
+          <MasonryList
+            image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image}
+            content={record => <ProjectPreview record={record} />}
+            breakpointCols={{ default: 4, 900: 3, 450: 1 }}
+            linkType="show"
+          />
+        </ListTab>
+        <ListTab
+          resource="Person"
+          basePath="/Person"
+          inversePredicate="pair:hasTopic"
+        >
+          <GridList xs={2} linkType="show">
+            <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
+          </GridList>
+        </ListTab>
+        <ListTab
+          label="Acteurs locaux"
+          resource="Organization"
+          basePath="/Organization"
+          inversePredicate="pair:hasTopic"
+        >
+          <MapList
+            latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude'] }
+            longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude'] }
+            label={record => record['pair:label']}
+            description={record => record['pair:description']}
+            center={[49.2839, 2.5955]}
+            zoom={11}
+            scrollWheelZoom
+          />
+        </ListTab>
+        <ListTab
+          label="Projets La Fabrique"
+          resource="Project"
+          basePath="/Project"
+          inversePredicate="pair:hasTopic"
+          filter={{ 'pair:supportedBy': process.env.REACT_APP_MIDDLEWARE_URL + 'services/lafabrique' }}
+        >
+          <MasonryList
+            image={record => Array.isArray(record?.image) ? record?.image?.[0] : record?.image}
+            content={record => <ProjectPreview record={record} />}
+            breakpointCols={{ default: 4, 900: 3, 450: 1 }}
+            linkType="show"
+          />
+        </ListTab>
+      </InverseReferenceShowLayout>
     </Show>
   );
 }

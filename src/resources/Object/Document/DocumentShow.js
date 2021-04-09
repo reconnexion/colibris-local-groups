@@ -8,10 +8,7 @@ import useDoubleClick from "../../../layout/useDoubleClick";
 
 const useStyles = makeStyles(theme => ({
   card: {
-    paddingTop: 10,
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: 0
-    }
+    paddingTop: 0
   }
 }));
 

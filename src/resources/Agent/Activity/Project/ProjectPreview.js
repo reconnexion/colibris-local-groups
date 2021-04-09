@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, makeStyles, Typography } from '@material-ui/core';
-import { ReferenceArrayField } from "@semapps/semantic-data-provider";
-import { SingleFieldList, ChipField } from "react-admin";
 
 const useStyles = makeStyles(() => ({
   content: {
@@ -26,11 +24,6 @@ const ProjectPreview = ({ record }) => {
     <Box className={classes.content}>
       <Typography variant="h5" color="textPrimary">{record?.['pair:label']}</Typography>
       <Typography variant="body2" color="textSecondary">
-        {/*<ReferenceArrayField record={record} reference="Status" source="pair:hasStatus">*/}
-        {/*  <SingleFieldList linkType="show">*/}
-        {/*    <ChipField source="pair:label" color="secondary" />*/}
-        {/*  </SingleFieldList>*/}
-        {/*</ReferenceArrayField>*/}
         {record?.['pair:description']}
       </Typography>
     </Box>

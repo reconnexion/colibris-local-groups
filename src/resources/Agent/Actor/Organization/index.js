@@ -1,4 +1,4 @@
-import PairResourceCreate from '../../../../pair/PairResourceCreate';
+import OrganizationCreate from "./OrganizationCreate";
 import OrganizationEdit from './OrganizationEdit';
 import OrganizationList from './OrganizationList';
 import OrganizationShow from './OrganizationShow';
@@ -8,7 +8,7 @@ export default {
   config: {
     list: OrganizationList,
     show: OrganizationShow,
-    create: PairResourceCreate,
+    create: OrganizationCreate,
     edit: OrganizationEdit,
     icon: HomeIcon,
     options: {
@@ -17,7 +17,7 @@ export default {
   },
   dataModel: {
     types: ['pair:Organization'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'organizations',
+    containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'organizations',
     dereference: ['pair:hasLocation/pair:hasPostalAddress'],
     slugField: 'pair:label'
   },

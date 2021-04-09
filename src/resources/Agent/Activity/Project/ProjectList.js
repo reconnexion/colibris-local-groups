@@ -5,7 +5,7 @@ import ProjectPreview from "./ProjectPreview";
 import ProjectFilterSidebar from "./ProjectFilterSidebar";
 
 const ProjectList = props => (
-  <List title="Frise des actions" aside={<ProjectFilterSidebar />} perPage={100} pagination={false} sort={{ field: 'published', order: 'ASC' }} {...props}>
+  <List title="Frise des actions" aside={<ProjectFilterSidebar />} filter={{ 'pair:supportedBy': process.env.REACT_APP_LOCAL_GROUP_URL }} perPage={100} pagination={false} sort={{ field: 'published', order: 'ASC' }} {...props}>
     <MasonryList
       image={record => record.image}
       content={record => <ProjectPreview record={record} />}

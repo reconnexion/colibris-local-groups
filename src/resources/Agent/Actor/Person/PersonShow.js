@@ -11,7 +11,6 @@ const PersonShow = props => (
     <>
       <Hero image="pair:image">
         <TextField source="pair:firstName" />
-        <TextField source="pair:lastName" />
         <ReferenceArrayField reference="Theme" source="pair:hasTopic">
           <SeparatedListField linkType="show">
             <TextField source="pair:label" />
@@ -19,7 +18,7 @@ const PersonShow = props => (
         </ReferenceArrayField>
       </Hero>
       <MainList>
-        <ReferenceArrayField reference="Project" source="pair:involvedIn">
+        <ReferenceArrayField reference="Activity" source="pair:involvedIn">
           <MasonryList
             image={record => record?.image || record?.['pair:hasTopic']?.[0]?.image || record?.['pair:hasTopic']?.[1]?.image}
             content={record => <ProjectPreview record={record} />}
@@ -27,11 +26,6 @@ const PersonShow = props => (
             linkType="show"
           />
         </ReferenceArrayField>
-        {/*<ReferenceArrayField reference="Organization" source="pair:affiliatedBy">*/}
-        {/*  <Datagrid rowClick="show">*/}
-        {/*    <TextField source="pair:label" />*/}
-        {/*  </Datagrid>*/}
-        {/*</ReferenceArrayField>*/}
         <MapField
           source="pair:hasLocation"
           latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude']}

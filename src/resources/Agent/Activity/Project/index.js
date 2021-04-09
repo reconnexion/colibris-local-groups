@@ -1,4 +1,4 @@
-import PairResourceCreate from '../../../../pair/PairResourceCreate';
+import ProjectCreate from "./ProjectCreate";
 import ProjectEdit from './ProjectEdit';
 import ProjectList from './ProjectList';
 import ProjectShow from './ProjectShow';
@@ -8,7 +8,7 @@ export default {
   config: {
     list: ProjectList,
     show: ProjectShow,
-    create: PairResourceCreate,
+    create: ProjectCreate,
     edit: ProjectEdit,
     icon: SettingsIcon,
     options: {
@@ -17,11 +17,8 @@ export default {
   },
   dataModel: {
     types: ['pair:Project'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'projects',
-    slugField: 'pair:label',
-    filter: {
-      'pair:supportedBy': process.env.REACT_APP_LOCAL_GROUP_URL
-    }
+    containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'projects',
+    slugField: 'pair:label'
   },
   translations: {
     fr: {

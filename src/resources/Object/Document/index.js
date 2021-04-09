@@ -17,7 +17,7 @@ export default {
   },
   dataModel: {
     types: ['pair:Document'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'documents',
+    containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'documents',
     slugField: 'pair:label',
     filter: {
       'pair:documents': process.env.REACT_APP_LOCAL_GROUP_URL
