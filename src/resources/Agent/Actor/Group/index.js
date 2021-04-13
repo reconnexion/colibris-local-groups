@@ -18,6 +18,9 @@ export default {
   dataModel: {
     types: ['pair:Group'],
     containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'groups',
+    filter: {
+      'pair:partOf': process.env.REACT_APP_LOCAL_GROUP_URL
+    },
     slugField: 'pair:label'
   },
   translations: {

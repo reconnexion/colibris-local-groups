@@ -3,9 +3,9 @@ import { ListBase } from 'react-admin';
 import { GridList, AvatarField } from '@semapps/archipelago-layout';
 
 export const GroupMembers = ({ groupSlug }) => (
-  <ListBase resource="Person" basePath="/Person" filter={{ 'pair:affiliatedBy': process.env.REACT_APP_MIDDLEWARE_URL + 'groups/' + groupSlug }} sort={{ field: 'pair:firstName', order: 'ASC' }}>
+  <ListBase resource="Person" basePath="/Person" filter={{ 'pair:affiliatedBy': process.env.REACT_APP_LOCAL_GROUP_CODS + 'groups/' + groupSlug }} sort={{ field: 'pair:label', order: 'DESC' }}>
     <GridList xs={2} linkType="show">
-      <AvatarField label={record => `${record['pair:firstName']} ${record['pair:lastName']}`} image="pair:image" labelColor="#afc544" />
+      <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
     </GridList>
   </ListBase>
 );

@@ -18,7 +18,7 @@ export default {
   dataModel: {
     types: ['semapps:Page'],
     containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'pages',
-    slugField: 'pair:label'
+    slugField: 'semapps:title'
   },
   translations: {
     fr: {

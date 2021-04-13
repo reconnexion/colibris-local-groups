@@ -29,7 +29,7 @@ const CardList = ({ record }) => {
 }
 
 const RolesList = () => (
-  <ListBase resource="Group" basePath="/Group" filter={{ 'pair:partOf': process.env.REACT_APP_LOCAL_GROUP_URL }}>
+  <ListBase resource="Group" basePath="/Group" filter={{ 'pair:partOf': process.env.REACT_APP_LOCAL_GROUP_URL, 'pair:hasType': process.env.REACT_APP_MIDDLEWARE_URL + 'types/role' }}>
     <GridList xs={6} linkType="show">
       <CardList />
     </GridList>

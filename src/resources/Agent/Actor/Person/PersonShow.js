@@ -16,6 +16,11 @@ const PersonShow = props => (
             <TextField source="pair:label" />
           </SeparatedListField>
         </ReferenceArrayField>
+        <ReferenceArrayField reference="Group" type={{ a: 'pair:Group' }} source="pair:affiliatedBy">
+          <SeparatedListField linkType="show">
+            <TextField source="pair:label" />
+          </SeparatedListField>
+        </ReferenceArrayField>
       </Hero>
       <MainList>
         <ReferenceArrayField reference="Activity" source="pair:involvedIn">

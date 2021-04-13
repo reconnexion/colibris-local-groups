@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Notification } from 'react-admin';
+import { Notification, Link } from 'react-admin';
 import { Container, Box, useMediaQuery, ThemeProvider, makeStyles, Typography } from '@material-ui/core';
 import { UserMenu, LogoutButton } from '@semapps/auth-provider';
 import AppBar from './AppBar';
@@ -31,6 +31,12 @@ const useStyles = makeStyles(theme => ({
       right: 50,
       fontSize: 22,
       zIndex: 10
+    }
+  },
+  footerLink: {
+    color: theme.palette.grey["500"],
+    '&:hover': {
+      textDecoration: 'underline'
     }
   }
 }));
@@ -65,7 +71,9 @@ const Layout = ({ appBar, logout, theme, children }) => {
         <Box mb={{ xs: 0, sm: 2 }}>{children}</Box>
         <Box mb={{ xs: 0, sm: 3 }}>
           <Typography variant="subtitle2" color="textSecondary" align="right">
-            Plateforme collaborative propulsée par SemApps &nbsp;|&nbsp; Nous contacter
+            <Link to="/SemApps" className={classes.footerLink}>Plateforme collaborative propulsée par SemApps</Link>
+            &nbsp;|&nbsp;
+            <Link to="/Contact" className={classes.footerLink}>Nous contacter</Link>
           </Typography>
         </Box>
       </Container>

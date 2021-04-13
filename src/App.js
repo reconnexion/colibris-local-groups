@@ -11,8 +11,10 @@ import * as resources from './resources';
 import Layout from './layout/Layout';
 import theme from './layout/theme';
 import LoginPage from './layout/LoginPage';
-import AboutPage from './layout/AboutPage';
-import HomePage from './layout/HomePage';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import SemAppsPage from "./pages/SemAppsPage";
 
 const history = createBrowserHistory();
 
@@ -29,6 +31,8 @@ const App = () => (
     dashboard={HomePage}
     customRoutes={[
       <Route exact path="/QuiSommesNous" component={AboutPage} />,
+      <Route exact path="/SemApps" component={SemAppsPage} />,
+      <Route exact path="/Contact" component={ContactPage} />,
     ]}
   >
     {Object.entries(resources).map(([key, resource]) => (

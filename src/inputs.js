@@ -8,6 +8,12 @@ export const OrganizationsInput = ({ label, source }) => (
   </ReferenceArrayInput>
 );
 
+export const GroupsInput = ({ label, source }) => (
+  <ReferenceArrayInput label={label} reference="Group" source={source}>
+    <AutocompleteArrayInput optionText="pair:label" fullWidth />
+  </ReferenceArrayInput>
+);
+
 export const ActorsInput = ({ label, source }) => (
   <ReferenceArrayInput label={label} reference="Actor" source={source}>
     <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
