@@ -22,7 +22,6 @@ const ProjectFilterSidebar = () => {
     <Card className={classes.card}>
       <CardContent>
         <FilterLiveSearch />
-        <ReferenceFilter reference="Status" source="pair:hasStatus" filter={{ a: 'pair:ProjectStatus' }} />
         <ReferenceFilter reference="Theme" source="pair:hasTopic" />
       </CardContent>
     </Card>
