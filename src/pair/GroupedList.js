@@ -9,7 +9,7 @@ const GroupedList = ({ groupBy, selectGroups, header, content }) => {
     if (data) {
       return Object.fromEntries(Object.entries(selectGroups).map(([groupUri]) =>
         ([groupUri, Object.fromEntries(Object.entries(data).filter(([_, record]) =>
-          record[groupBy] === groupUri
+           Array.isArray(record[groupBy]) ? record[groupBy].includes(groupUri) : record[groupBy] === groupUri
         ))])
       ));
     } else {

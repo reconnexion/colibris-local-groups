@@ -5,9 +5,10 @@ import { ReferenceArrayField } from '@semapps/semantic-data-provider';
 import { MapField } from "@semapps/geo-components";
 import PersonTitle from './PersonTitle';
 import ProjectPreview from "../../Activity/Project/ProjectPreview";
+import ContactField from "../../../../layout/ContactField";
 
 const PersonShow = props => (
-  <Show title={<PersonTitle />} {...props}>
+  <Show title={<PersonTitle />} {...props} hasEdit={false}>
     <>
       <Hero image="pair:image">
         <TextField source="pair:firstName" />
@@ -21,6 +22,7 @@ const PersonShow = props => (
             <TextField source="pair:label" />
           </SeparatedListField>
         </ReferenceArrayField>
+        <ContactField source="pair:e-mail" />
       </Hero>
       <MainList>
         <ReferenceArrayField reference="Activity" source="pair:involvedIn">

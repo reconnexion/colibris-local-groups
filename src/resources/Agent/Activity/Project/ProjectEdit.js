@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageInput, SimpleForm, TextInput } from 'react-admin';
 import MarkdownInput from '../../../../markdown/MarkdownInput'
 import { Edit } from '@semapps/archipelago-layout';
-import { DocumentsInput, ThemesInput, StatusInput } from '../../../../inputs';
+import { DocumentsInput, ThemesInput, StatusInput, PersonsInput } from '../../../../inputs';
 import ProjectTitle from './ProjectTitle';
 import { ImageField } from '@semapps/semantic-data-provider';
 import PairLocationInput from "../../../../pair/PairLocationInput";
@@ -17,6 +17,7 @@ const ProjectEdit = props => (
       <ImageInput source="image" accept="image/*">
         <ImageField source="src" />
       </ImageInput>
+      <PersonsInput source="pair:involves" />
       <DocumentsInput source="pair:documentedBy" />
       <ThemesInput source="pair:hasTopic" />
       <StatusInput source="pair:hasStatus" />

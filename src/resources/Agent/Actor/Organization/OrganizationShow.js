@@ -23,9 +23,9 @@ const OrganizationShow = props => (
         <MarkdownField source="pair:description" />
         <MapField
           source="pair:hasLocation"
-          address={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:label']}
-          latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude']}
-          longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude']}
+          address={record => record?.['pair:hasLocation']?.['pair:label']}
+          latitude={record => record?.['pair:hasLocation']?.['pair:latitude']}
+          longitude={record => record?.['pair:hasLocation']?.['pair:longitude']}
         />
       </MainList>
     </>

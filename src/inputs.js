@@ -40,7 +40,7 @@ export const EventsInput = ({ label, source }) => (
 
 export const ThemesInput = ({ label, source }) => (
   <ReferenceArrayInput label={label} reference="Theme" source={source}>
-    <AutocompleteArrayInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
+    <AutocompleteArrayInput optionText="pair:label" fullWidth />
   </ReferenceArrayInput>
 );
 

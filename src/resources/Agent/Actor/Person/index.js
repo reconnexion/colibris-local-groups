@@ -24,6 +24,7 @@ export default {
       name: 'Personne |||| Personnes',
       fields: {
         'pair:firstName': 'Prénom',
+        'pair:e-mail': 'Adresse e-mail',
         'pair:lastName': 'Nom de famille',
         'pair:image': 'Photo',
         'pair:hasLocation': 'Localisation',

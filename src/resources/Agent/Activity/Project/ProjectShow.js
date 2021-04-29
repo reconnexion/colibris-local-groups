@@ -1,12 +1,10 @@
 import React from 'react';
 import { DateField, UrlField, TextField } from 'react-admin';
-import { MainList, Hero, Show, AccordionList, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
+import { MainList, Hero, Show, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
-import { ActivitiesList } from '@semapps/activitypub-components';
 import { MapField } from "@semapps/geo-components";
 import MarkdownField from "../../../../markdown/MarkdownField";
 import ProjectTitle from './ProjectTitle';
-import NotePreview from "../../../ActivityPub/NotePreview";
 
 const ProjectShow = props => (
   <Show title={<ProjectTitle />} {...props}>
@@ -39,13 +37,13 @@ const ProjectShow = props => (
           latitude={record => record['pair:hasLocation']?.['pair:latitude']}
           longitude={record => record['pair:hasLocation']?.['pair:longitude']}
         />
-        <ActivitiesList source="outbox">
-          <AccordionList
-            date={record => record && record.published}
-            title={record => record && record.name}
-            content={NotePreview}
-          />
-        </ActivitiesList>
+        {/*<ActivitiesList source="outbox">*/}
+        {/*  <AccordionList*/}
+        {/*    date={record => record && record.published}*/}
+        {/*    title={record => record && record.name}*/}
+        {/*    content={NotePreview}*/}
+        {/*  />*/}
+        {/*</ActivitiesList>*/}
       </MainList>
     </>
   </Show>

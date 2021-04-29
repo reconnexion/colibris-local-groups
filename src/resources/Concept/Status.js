@@ -4,8 +4,7 @@ export default {
   config: {
     icon: LanguageIcon,
     options: {
-      label: 'Statuts',
-      parent: 'Concept'
+      label: 'Statuts'
     }
   },
   dataModel: {

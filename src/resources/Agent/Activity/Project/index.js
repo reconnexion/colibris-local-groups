@@ -29,6 +29,7 @@ export default {
         'pair:comment': 'Courte description',
         'pair:description': 'Description',
         'pair:homePage': 'Site web',
+        'pair:aboutPage': 'Site web',
         'pair:involves': 'Implique',
         'pair:documentedBy': 'Documenté par',
         'pair:hasTopic': 'A pour thème',

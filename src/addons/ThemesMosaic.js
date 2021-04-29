@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useGetMany } from 'react-admin';
+import { Link, useQueryWithStore } from 'react-admin';
 import { GridList, GridListTile, GridListTileBar, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
@@ -46,18 +46,23 @@ const tileData = [
 
 export const ThemesMosaic = () => {
   const classes = useStyles();
-  const { data, loading } = useGetMany('Theme', tileData.map(tile => process.env.REACT_APP_MIDDLEWARE_URL + 'themes/' + tile.slug));
+
+  const { data, loading } = useQueryWithStore({
+    type: 'getMany',
+    resource: 'Theme',
+    payload: { ids: tileData.map(tile => process.env.REACT_APP_MIDDLEWARE_URL + 'themes/' + tile.slug) }
+  });
+
   if( loading ) {
-    return null;
-    // return(
-    //   <GridList cellHeight={240} cols={8}>
-    //     {tileData.map((tile, i) =>
-    //       <GridListTile key={i} cols={tile.cols} className={classes.tile}>
-    //         <GridListTileBar title={tile.title} />
-    //       </GridListTile>
-    //     )}
-    //   </GridList>
-    // )
+    return(
+      <GridList cellHeight={240} cols={8}>
+        {tileData.map((tile, i) =>
+          <GridListTile key={i} cols={tile.cols} className={classes.tile}>
+            <GridListTileBar title={tile.title} />
+          </GridListTile>
+        )}
+      </GridList>
+    )
   } else {
     return (
       <GridList cellHeight={240} cols={8}>

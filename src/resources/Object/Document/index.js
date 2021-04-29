@@ -28,6 +28,7 @@ export default {
       name: 'Document |||| Documents',
       fields: {
         'pair:label': 'Titre',
+        'pair:hasType': 'Type',
         'pair:description': 'Description',
         'pair:comment': 'Courte description',
         'pair:containedIn': 'Dossier',
