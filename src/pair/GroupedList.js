@@ -6,7 +6,6 @@ const GroupedList = ({ groupBy, selectGroups, header, content }) => {
   const { ids, data, ...rest } = useListContext();
 
   const groups = useMemo(() => {
-    console.log('group calculation');
     if (data) {
       return Object.fromEntries(Object.entries(selectGroups).map(([groupUri]) =>
         ([groupUri, Object.fromEntries(Object.entries(data).filter(([_, record]) =>
@@ -17,8 +16,6 @@ const GroupedList = ({ groupBy, selectGroups, header, content }) => {
       return {};
     }
   }, [data, groupBy, selectGroups]);
-
-  console.log('groups', groups);
 
   return (
     Object.entries(groups).map(([groupUri, groupData], i) => (

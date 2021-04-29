@@ -18,6 +18,7 @@ export default {
   dataModel: {
     types: ['pair:Project'],
     containerUri: process.env.REACT_APP_LOCAL_GROUP_CODS + 'projects',
+    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
     slugField: 'pair:label'
   },
   translations: {
@@ -32,6 +33,7 @@ export default {
         'pair:documentedBy': 'Documenté par',
         'pair:hasTopic': 'A pour thème',
         'pair:hasStatus': 'Statut',
+        'pair:hasLocation': 'Adresse',
         published: 'Publié',
         updated: 'Mis à jour',
         outbox: 'Actualités'

@@ -3,6 +3,7 @@ import { DateField, UrlField, TextField } from 'react-admin';
 import { MainList, Hero, Show, AccordionList, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
 import { ActivitiesList } from '@semapps/activitypub-components';
+import { MapField } from "@semapps/geo-components";
 import MarkdownField from "../../../../markdown/MarkdownField";
 import ProjectTitle from './ProjectTitle';
 import NotePreview from "../../../ActivityPub/NotePreview";
@@ -32,6 +33,12 @@ const ProjectShow = props => (
             <AvatarField label="pair:label" image="pair:image" labelColor="#afc544" />
           </GridList>
         </ReferenceArrayField>
+        <MapField
+          source="pair:hasLocation"
+          address={record => record['pair:hasLocation']?.['pair:label']}
+          latitude={record => record['pair:hasLocation']?.['pair:latitude']}
+          longitude={record => record['pair:hasLocation']?.['pair:longitude']}
+        />
         <ActivitiesList source="outbox">
           <AccordionList
             date={record => record && record.published}
