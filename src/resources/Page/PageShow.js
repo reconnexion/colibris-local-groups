@@ -1,12 +1,13 @@
 import React from 'react';
-import {Typography, Box, makeStyles} from '@material-ui/core';
+import { Typography, Box, makeStyles } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { MainList, Show } from '@semapps/archipelago-layout';
-import MarkdownField from "../../markdown/MarkdownField";
+import { MarkdownField } from '@semapps/markdown-components';
 import PageTitle from './PageTitle';
 import useDoubleClick from "../../layout/useDoubleClick";
+import * as addons from "../../addons";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   card: {
     paddingTop: 0
   }
@@ -22,7 +23,7 @@ const PageShow = props => {
         <Box ref={refCallback}>
           <MainList>
             <Typography variant="h3" color="primary" component="h1" id="react-admin-title" />
-            <MarkdownField source="semapps:content" addLabel={false} />
+            <MarkdownField source="semapps:content" addLabel={false} overrides={addons} />
           </MainList>
         </Box>
       </>

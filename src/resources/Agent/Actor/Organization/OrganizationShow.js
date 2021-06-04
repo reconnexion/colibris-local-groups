@@ -3,7 +3,7 @@ import { TextField, UrlField } from 'react-admin';
 import { Hero, MainList, Show, SeparatedListField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from "@semapps/semantic-data-provider";
 import { MapField } from "@semapps/geo-components";
-import MarkdownField from "../../../../markdown/MarkdownField";
+import { MarkdownField } from '@semapps/markdown-components';
 import OrganizationTitle from './OrganizationTitle';
 
 const OrganizationShow = props => (

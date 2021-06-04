@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImageInput, SimpleForm, TextInput } from 'react-admin';
-import MarkdownInput from '../../../../markdown/MarkdownInput'
+import { MarkdownInput } from '@semapps/markdown-components';
 import { Edit } from '@semapps/archipelago-layout';
 import { DocumentsInput, ThemesInput, StatusInput, PersonsInput } from '../../../../inputs';
 import ProjectTitle from './ProjectTitle';
@@ -12,7 +12,7 @@ const ProjectEdit = props => (
   <Edit title={<ProjectTitle />} {...props}>
     <SimpleForm redirect="show">
       <TextInput source="pair:label" fullWidth />
-      <MarkdownInput multiline source="pair:description" fullWidth />
+      <MarkdownInput source="pair:description" fullWidth />
       <TextInput source="pair:homePage" fullWidth />
       <ImageInput source="image" accept="image/*">
         <ImageField source="src" />

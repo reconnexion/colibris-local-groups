@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleForm, TextInput } from 'react-admin';
-import MarkdownInput from '../../../../markdown/MarkdownInput'
+import { MarkdownInput } from '@semapps/markdown-components';
 import { Edit } from '@semapps/archipelago-layout';
 import { DateTimeInput } from '@semapps/date-components';
 import { PersonsInput, ThemesInput } from '../../../../inputs';
@@ -13,7 +13,7 @@ const EventEdit = props => (
     <SimpleForm redirect="show">
       <TextInput source="pair:label" fullWidth />
       <TextInput source="pair:comment" fullWidth />
-      <MarkdownInput multiline source="pair:description" fullWidth />
+      <MarkdownInput source="pair:description" fullWidth />
       <TextInput source="pair:aboutPage" fullWidth />
       <DateTimeInput
         source="pair:startDate"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleShowLayout, ReferenceField, TextField } from 'react-admin';
-import MarkdownField from "../../markdown/MarkdownField";
+import { MarkdownField } from '@semapps/markdown-components';
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({

@@ -26,6 +26,7 @@ export default {
         'pair:firstName': 'Prénom',
         'pair:e-mail': 'Adresse e-mail',
         'pair:lastName': 'Nom de famille',
+        'pair:description': 'Qui êtes-vous ?',
         'pair:image': 'Photo',
         'pair:hasLocation': 'Localisation',
         'pair:involvedIn': 'Impliqué dans',

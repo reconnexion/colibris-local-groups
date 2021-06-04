@@ -3,7 +3,7 @@ import { DateField, UrlField, TextField } from 'react-admin';
 import { MainList, Hero, Show, SeparatedListField, GridList, AvatarField } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
 import { MapField } from "@semapps/geo-components";
-import MarkdownField from "../../../../markdown/MarkdownField";
+import { MarkdownField } from '@semapps/markdown-components';
 import ProjectTitle from './ProjectTitle';
 
 const ProjectShow = props => (

@@ -3,6 +3,7 @@ import { TextField } from 'react-admin';
 import { Hero, Show, MainList, SeparatedListField, MasonryList } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from '@semapps/semantic-data-provider';
 import { MapField } from "@semapps/geo-components";
+import { MarkdownField } from '@semapps/markdown-components';
 import PersonTitle from './PersonTitle';
 import ProjectPreview from "../../Activity/Project/ProjectPreview";
 import ContactField from "../../../../layout/ContactField";
@@ -25,6 +26,7 @@ const PersonShow = props => (
         <ContactField source="pair:e-mail" />
       </Hero>
       <MainList>
+        <MarkdownField source="pair:description" />
         <ReferenceArrayField reference="Activity" source="pair:involvedIn">
           <MasonryList
             image={record => record?.image || record?.['pair:hasTopic']?.[0]?.image || record?.['pair:hasTopic']?.[1]?.image}

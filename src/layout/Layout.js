@@ -68,7 +68,7 @@ const Layout = ({ appBar, logout, theme, children }) => {
       {React.cloneElement(appBar, { logout, menuItems, setSidebarOpen })}
       <Container maxWidth="lg" disableGutters={xs}>
         <Typography variant="h4" color="primary" className={classes.title} id="react-admin-title" component="h1" />
-        <Box mb={{ xs: 0, sm: 2 }}>{children}</Box>
+        <Box mt={1} mb={{ xs: 0, sm: 2 }}>{children}</Box>
         <Box mb={{ xs: 0, sm: 3 }}>
           <Typography variant="subtitle2" color="textSecondary" align="right">
             <Link to="/SemApps" className={classes.footerLink}>Plateforme collaborative propulsée par SemApps</Link>

@@ -2,8 +2,9 @@ import React from 'react';
 import { Admin, Resource } from 'react-admin';
 import { createBrowserHistory } from 'history';
 import { Route } from 'react-router-dom';
-import { authProvider, LogoutButton } from '@semapps/auth-provider';
+import { LogoutButton } from '@semapps/auth-provider';
 
+import authProvider from './config/authProvider';
 import i18nProvider from './config/i18nProvider';
 import dataProvider from './config/dataProvider';
 import * as resources from './resources';
@@ -20,7 +21,7 @@ const history = createBrowserHistory();
 
 const App = () => (
   <Admin
-    authProvider={authProvider(process.env.REACT_APP_MIDDLEWARE_URL)}
+    authProvider={authProvider}
     dataProvider={dataProvider}
     i18nProvider={i18nProvider}
     layout={Layout}

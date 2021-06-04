@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core";
 import { AvatarField, GridList, MainList, Show } from '@semapps/archipelago-layout';
 import { ReferenceArrayField } from "@semapps/semantic-data-provider";
-import MarkdownField from "../../../../markdown/MarkdownField";
+import { MarkdownField } from '@semapps/markdown-components';
 import GroupTitle from './GroupTitle';
 
 const useStyles = makeStyles(theme => ({

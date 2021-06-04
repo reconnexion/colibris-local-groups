@@ -1,9 +1,10 @@
 import React from 'react';
 import { ImageInput, SimpleForm, TextInput } from 'react-admin';
 import { Edit } from '@semapps/archipelago-layout';
-import { ActivitiesInput, GroupsInput, ThemesInput } from '../../../../inputs';
 import { ImageField } from '@semapps/semantic-data-provider';
+import { MarkdownInput } from '@semapps/markdown-components';
 import PersonTitle from './PersonTitle';
+import { ActivitiesInput, GroupsInput, ThemesInput } from '../../../../inputs';
 import PairLocationInput from "../../../../pair/PairLocationInput";
 
 export const PersonEdit = props => (
@@ -14,7 +15,8 @@ export const PersonEdit = props => (
       <ImageInput source="pair:image" accept="image/*">
         <ImageField source="src" />
       </ImageInput>
-      <ActivitiesInput source="pair:involvedIn" />
+      <MarkdownInput source="pair:description" fullWidth />
+      <ActivitiesInput source="pair:involvedIn" helperText="A quelles actions locales contribuez-vous ?" />
       <GroupsInput source="pair:affiliatedBy" />
       <ThemesInput source="pair:hasTopic" />
       <PairLocationInput source="pair:hasLocation" fullWidth helperText="Vous pouvez mettre l'adresse de votre commune si vous ne souhaitez pas être localisable." />
