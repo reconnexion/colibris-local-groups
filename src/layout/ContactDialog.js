@@ -34,7 +34,7 @@ const FinalFormTextField = ({ input: { name, onChange, value, ...restInput }, me
   />
 );
 
-const ContactDialog = ({ user, emailPredicate, open, onClose }) => {
+const ContactDialog = ({ user, emailPredicate, open, onClose, ...rest }) => {
   const classes = useStyles();
   const notify = useNotify();
 
@@ -79,6 +79,7 @@ const ContactDialog = ({ user, emailPredicate, open, onClose }) => {
           </Dialog>
         </form>
       )}
+      {...rest}
     />
   );
 };

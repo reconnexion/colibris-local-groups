@@ -8,7 +8,7 @@ import { ActivitiesInput, GroupsInput, ThemesInput } from '../../../../inputs';
 import PairLocationInput from "../../../../pair/PairLocationInput";
 
 export const PersonEdit = props => (
-  <Edit title={<PersonTitle />} transform={data => ({ ...data, 'pair:label': data['pair:firstName'], 'pair:affiliatedBy': [...data['pair:affiliatedBy'], process.env.REACT_APP_LOCAL_GROUP_URL] })} {...props}>
+  <Edit title={<PersonTitle />} transform={data => ({ ...data, 'pair:label': data['pair:firstName'], 'foaf:email': data['pair:e-mail'], 'foaf:name': data['pair:firstName'] })} {...props}>
     <SimpleForm redirect="show">
       <TextInput source="pair:firstName" fullWidth />
       <TextInput source="pair:e-mail" fullWidth helperText="N'est pas visible sur le site, mais permet aux personnes de vous contacter via un formulaire." />

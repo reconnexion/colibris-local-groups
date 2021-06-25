@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useRecordContext } from 'react-admin';
+import { useRecordContext, useGetIdentity } from 'react-admin';
 import { Typography, Link } from "@material-ui/core";
 import ContactDialog from './ContactDialog';
 
 const ContactField = ({ source }) => {
   const [showDialog, setShowDialog] = useState(false);
   const record = useRecordContext();
+  const { identity } = useGetIdentity();
+  console.log('identity', identity);
 
   if (record) {
     return (
@@ -20,6 +22,7 @@ const ContactField = ({ source }) => {
           emailPredicate={source}
           open={showDialog}
           onClose={() => setShowDialog(false)}
+          initialValues={{ name: identity?.fullName }}
         />
       </>
     );

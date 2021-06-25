@@ -37,6 +37,7 @@ const PersonShow = props => (
         </ReferenceArrayField>
         <MapField
           source="pair:hasLocation"
+          address={record => record['pair:hasLocation']?.['pair:label']}
           latitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:latitude']}
           longitude={record => record['pair:hasLocation'] && record['pair:hasLocation']['pair:longitude']}
         />
