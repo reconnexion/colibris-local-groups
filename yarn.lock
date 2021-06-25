@@ -1194,6 +1194,46 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
+"@fullcalendar/common@~5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.8.0.tgz#43e79e26e6347af83baaa603157aced67e23d549"
+  integrity sha512-cKmXNgo/9auw86MOwXxA+5FRrgvbE93C9YDwic+Alfm3bUruDTzJDnuvRndrFVurpSBLm6/ZitaR+yoWKLIsgA==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fullcalendar/core@^5.7.2":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-5.8.0.tgz#86f034fc4a49c6a44886380aff01c6fcd7204966"
+  integrity sha512-55Zwy4fwcxBqHjfjhV5eae4qOh9fMlpjGcyy4Zt39zA1NlgUW0JxCGOyIu2K2jm2JZn+27/P8b06JXy57DmtKg==
+  dependencies:
+    "@fullcalendar/common" "~5.8.0"
+    preact "^10.0.5"
+    tslib "^2.1.0"
+
+"@fullcalendar/daygrid@^5.7.2":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.8.0.tgz#6a5991886ed3323366f72e7614ac8907cbd8d998"
+  integrity sha512-VrqwI97cewoUjFrKT67sS+f+JANI8xMx0g5bpM0XgV/KEEwvXpH5OmwkFSbXOnx1m4RXsvolQc6EBZpnJCf69Q==
+  dependencies:
+    "@fullcalendar/common" "~5.8.0"
+    tslib "^2.1.0"
+
+"@fullcalendar/list@^5.7.2":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-5.8.0.tgz#703290784d860133abaa9176bdf66383f7c7ef9f"
+  integrity sha512-JlqXbWq8Gl2BMx1mOAeEWakW43xDYypBBjwKztnax5tOB5Sfty8chVmeG7ffz2NFtvg2c1nj6MP/zGrVCYY0RA==
+  dependencies:
+    "@fullcalendar/common" "~5.8.0"
+    tslib "^2.1.0"
+
+"@fullcalendar/react@^5.7.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-5.8.0.tgz#4e5dbcb48b82db61b359de9f0b6e6a49483ace91"
+  integrity sha512-lGvExh2It8eEfH/Pu9Al6NExwAsq4zXFspcKeXjCARqETUqI0hL7PXuxwvedFlAGUuj2cdbpEnasFc89rGeENA==
+  dependencies:
+    "@fullcalendar/common" "~5.8.0"
+    tslib "^2.1.0"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1551,15 +1591,15 @@
   resolved "https://registry.yarnpkg.com/@redux-saga/types/-/types-1.1.0.tgz#0e81ce56b4883b4b2a3001ebe1ab298b84237204"
   integrity sha512-afmTuJrylUU/0OtqzaRkbyYFFNgCF73Bvel/sw90pvGrWIZ+vyoIJqA6eMSoA6+nb443kTmulmBtC9NerXboNg==
 
-"@semapps/activitypub-components@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/activitypub-components/-/activitypub-components-0.3.0.tgz#27e79b8585cdd402e34e0ba5b929c3bfde442c49"
-  integrity sha512-8LwhpcesmdmkzL0NY5f5/IcvZtZazaPBHsZJtDn/7hVVgDPL69hWgpv9+eu2S9yst79vyA9Z//iXKgubHplQKw==
+"@semapps/activitypub-components@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/activitypub-components/-/activitypub-components-0.3.2.tgz#267ad90a3f1a049978dfe4114ab3a9ccd2a341ee"
+  integrity sha512-z0FVddrSuVABv/7Zwg5BM/UtG+EGSeiXckshiI2V5NQiSp6N3MZAO2A/1P4oMfz9vghH1Kn/Nc//or8MKJXuLg==
 
-"@semapps/archipelago-layout@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/archipelago-layout/-/archipelago-layout-0.3.0.tgz#d389bc1873d8d627b1e5d09931296e23a3758090"
-  integrity sha512-k7nrxGAIBRqM5c7VD3zocQiFi4iNm7uPt2UhPnk1W2xfplMtRqycMV2NNQPTsat7UDYmmA7qQdQ9RN4OWpxT5g==
+"@semapps/archipelago-layout@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/archipelago-layout/-/archipelago-layout-0.3.2.tgz#acf24bf7b30c71a2110494513f9419d2f3224d70"
+  integrity sha512-xIKzD3012DOEsDLxT9I3K1psoovlEyxd8oik7mhVVgqbzObCfpWgEtp+ThMkjYiQ55+ClN9QDPNw4S9ITfT2GA==
   dependencies:
     "@material-ui/lab" "^4.0.0-alpha.57"
     autosuggest-highlight "^3.1.1"
@@ -1570,29 +1610,33 @@
     react-markdown "^4.3.1"
     react-masonry-css "^1.0.14"
 
-"@semapps/auth-provider@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/auth-provider/-/auth-provider-0.3.0.tgz#18316d2471ad2887ba454d995fbff1af561a5d84"
-  integrity sha512-38BxR/YZPopSj5mGoDu7cmdPfF/fzCPFwuLBNBbKyql0JAGzCjVQY6cwIpaV/qvlRjzwFxZLh0YdDGePsSIDhQ==
+"@semapps/auth-provider@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/auth-provider/-/auth-provider-0.3.2.tgz#c35c4fb31967b3f76fbbc90d75cbd8dc3d52e9de"
+  integrity sha512-nyHiNW4YeaaF7wCsqD3agABhzHFEPKT9qy04rdonokSw8lSSCc9S9S85ZoELMZHpCYV0UBz2LDFD+nNvFrBEYQ==
   dependencies:
     "@material-ui/lab" "^4.0.0-alpha.57"
     jwt-decode "^3.0.0"
     url-join "^4.0.1"
 
-"@semapps/date-components@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/date-components/-/date-components-0.3.0.tgz#383f70c847aacefe40d8e09a8637c4d6adc62fcf"
-  integrity sha512-r25zPD3AkiRicb+msDdW3jwpvUKqS2mxW5FZjLxDIrivew1MNjEdVnqmbmZOHDRcgkhuhD4+2r+D8IZPHgZfXw==
+"@semapps/date-components@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/date-components/-/date-components-0.3.2.tgz#ccdae10977785e833e00aadd91b98698672507ed"
+  integrity sha512-R7euOaybm1leqQ0Iv8jXg7m3mI6K8Qmg8zA2eSwY6I177yADm5V5i1Kp/qkwvciG5S2mTlVblVG63xP2z3NmxA==
   dependencies:
     "@date-io/core" "^1.3.6"
     "@date-io/date-fns" "^1.3.13"
+    "@fullcalendar/core" "^5.7.2"
+    "@fullcalendar/daygrid" "^5.7.2"
+    "@fullcalendar/list" "^5.7.2"
+    "@fullcalendar/react" "^5.7.0"
     "@material-ui/pickers" "^3.2.10"
     date-fns "~2.8.1"
 
-"@semapps/geo-components@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/geo-components/-/geo-components-0.3.0.tgz#25d85706c9928522f58c2a213933e55ce7dd6598"
-  integrity sha512-umS/ynLxZqKqi5bZx3EG4mWUH8yCx6pA3qdlHYEpszvo8/02YiValF1nweFxUZlGulXyfbBnOWVfiorCEsdndA==
+"@semapps/geo-components@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/geo-components/-/geo-components-0.3.2.tgz#602035dce51d32d1eb0a64dc5cf90fb897c46423"
+  integrity sha512-A6RTm+BjijJhjq/ynBErn/Xf8/71Qdi/5+oVthBc1Yo7EJJZYWMlhDMGmf37X8rYjcoAmWKJjAdIkgAvtGmTMQ==
   dependencies:
     "@material-ui/lab" "^4.0.0-alpha.57"
     autosuggest-highlight "^3.1.1"
@@ -1600,18 +1644,18 @@
     react-leaflet "^3.1.0"
     react-leaflet-markercluster "^3.0.0-rc1"
 
-"@semapps/markdown-components@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/markdown-components/-/markdown-components-0.3.0.tgz#9dd04cce44d50fa2f9eea71c8692bdef20184916"
-  integrity sha512-9r19tbz2SasCZkBw/OmE73mJAMjBkX1PUEaTNOZYAbFCCcWmgl3SOfL9zbXWpqNUTls2CaFyelkFZY3sLPbHqA==
+"@semapps/markdown-components@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/markdown-components/-/markdown-components-0.3.2.tgz#163079ac3d55e6c0c14fc3658e294b83af07889d"
+  integrity sha512-n8aIRJarYvoZ6lfV1EU4o93bIBAD9dTtprVRnLIz8gxoL0Cqu24GqEPu7fjGBWPiMXFMfjhzGrLbEySbiDvzDw==
   dependencies:
     markdown-to-jsx "^7.1.3"
     react-mde "^11.5.0"
 
-"@semapps/semantic-data-provider@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@semapps/semantic-data-provider/-/semantic-data-provider-0.3.0.tgz#6215e72b1877a3a662a3f963e232f09db973107f"
-  integrity sha512-dLNqdRzniVyuZnRn7YP2bOnSNkZWblwqCiUjjeM3r4VLuVAhqKS5//FR+EJzoWEREXbZAbkSmykifip7VZahjA==
+"@semapps/semantic-data-provider@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@semapps/semantic-data-provider/-/semantic-data-provider-0.3.2.tgz#c525167cfa96ed5b1ee66db0e387fcb89371fcb8"
+  integrity sha512-j6V+gcaJ/bpVmfIkcw6HwGVJ0wqy7SZs3feOs20ERd2/EUVIEPtRj7CZPZ6b2CcfGSLp1F+VKbuvV6nrdqcqzw==
   dependencies:
     jsonld "^5.2.0"
     speakingurl "^14.0.1"
@@ -9289,6 +9333,11 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, po
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
+preact@^10.0.5:
+  version "10.5.13"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.5.13.tgz#85f6c9197ecd736ce8e3bec044d08fd1330fa019"
+  integrity sha512-q/vlKIGNwzTLu+jCcvywgGrt+H/1P/oIRSD6mV4ln3hmlC+Aa34C7yfPI4+5bzW8pONyVXYS7SvXosy2dKKtWQ==
+
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -11388,6 +11437,11 @@ tslib@^2.0.1, tslib@^2.0.3:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
   integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
+
+tslib@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
 tsutils@^3.17.1:
   version "3.20.0"
