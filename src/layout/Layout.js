@@ -33,6 +33,11 @@ const useStyles = makeStyles(theme => ({
       zIndex: 10
     }
   },
+  footer: {
+    '@media print': {
+      display: 'none'
+    }
+  },
   footerLink: {
     color: theme.palette.grey["500"],
     '&:hover': {
@@ -69,7 +74,7 @@ const Layout = ({ appBar, logout, theme, children }) => {
       <Container maxWidth="lg" disableGutters={xs}>
         <Typography variant="h4" color="primary" className={classes.title} id="react-admin-title" component="h1" />
         <Box mt={1} mb={{ xs: 0, sm: 2 }}>{children}</Box>
-        <Box mb={{ xs: 0, sm: 3 }}>
+        <Box mb={{ xs: 0, sm: 3 }} className={classes.footer}>
           <Typography variant="subtitle2" color="textSecondary" align="right">
             <Link to="/SemApps" className={classes.footerLink}>Plateforme collaborative propulsée par SemApps</Link>
             &nbsp;|&nbsp;
